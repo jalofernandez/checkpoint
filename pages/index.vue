@@ -1,6 +1,7 @@
 <template>
-  <div class="container">
+  <div class="container dark:bg-gray-700">
     <div>
+      <ThemeSwitch />
       <Logo />
       <h1 class="title">checkpoint</h1>
       <div class="links">
@@ -27,7 +28,13 @@
 </template>
 
 <script>
-export default {}
+// not necessary cause "components: true" option set is enabled in "nuxt.config" file
+// import ThemeSwitch from '@/components/ThemeSwitch'
+// import BaseLink from '@/components/BaseLink'
+
+export default {
+  // components: { ThemeSwitch, BaseLink },
+}
 </script>
 
 <style>

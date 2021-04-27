@@ -17,6 +17,19 @@ html {
   box-sizing: border-box;
 }
 
+html.dark {
+  @apply bg-gray-700;
+}
+
+html.dark,
+html.light {
+  -webkit-transition: all 0.15s ease;
+  -moz-transition: all 0.15s ease;
+  -ms-transition: all 0.15s ease;
+  -o-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+}
+
 *,
 *::before,
 *::after {

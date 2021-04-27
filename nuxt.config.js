@@ -32,12 +32,19 @@ export default {
     '@nuxtjs/tailwindcss',
     // https://color-mode.nuxtjs.org/
     '@nuxtjs/color-mode',
-    // https://www.npmjs.com/package/@nuxtjs/svg
-    "@nuxtjs/svg",
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: [
+    // https://www.npmjs.com/package/@nuxtjs/svg
+    '@nuxtjs/svg',
+  ],
+
+  colorMode: {
+    preference: 'dark',
+    fallback: 'light',
+    classSuffix: '',
+  },
 
   // https://storybook.nuxtjs.org/setup
   storybook: {},
