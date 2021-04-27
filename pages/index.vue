@@ -1,9 +1,6 @@
 <template>
-  <div class="container dark:bg-gray-700">
+  <div class="container">
     <div>
-      <ThemeSwitch />
-      <Logo />
-      <h1 class="title">checkpoint</h1>
       <div class="links">
         <a
           href="https://nuxtjs.org/"

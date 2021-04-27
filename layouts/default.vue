@@ -1,6 +1,9 @@
 <template>
   <div>
-    <Nuxt />
+    <BaseHeader />
+    <main class="dark:bg-gray-700">
+      <Nuxt />
+    </main>
   </div>
 </template>
 

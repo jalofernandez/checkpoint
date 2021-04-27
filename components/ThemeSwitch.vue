@@ -1,6 +1,6 @@
 <template>
-  <div>
-    {{ $colorMode.preference }}
+  <div class="flex flex-row justify-between items-center pr-2">
+    <!-- {{ $colorMode.preference }} -->
     <transition name="fade" appear>
       <IconDark
         v-if="$colorMode.preference != 'dark'"
