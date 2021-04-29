@@ -19,7 +19,10 @@
     <div
       class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
     >
-      <a class="flex title-font font-medium items-center mb-4 md:mb-0">
+      <NuxtLink
+        to="/"
+        class="flex title-font font-medium items-center mb-4 md:mb-0"
+      >
         <LogoBrand class="logo-brand" />
         <!-- <span class="ml-3 text-xl brand-color-300">
           <b class="light:text-white">Check</b>Point
@@ -27,7 +30,7 @@
         <h1 class="brand-color-300">
           <b class="pl-2 light:text-white">Check</b>Point
         </h1>
-      </a>
+      </NuxtLink>
       <nav
         class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400 flex flex-wrap items-center text-base justify-center"
       >
@@ -38,6 +41,11 @@
       </nav>
       <div class="flex flex-row items-center">
         <ThemeSwitch />
+        <img
+          class="w-10 h-10"
+          src="@/assets/images/profile-default.png"
+          alt="Profile pic by default"
+        />
         <BurgerMenu />
       </div>
       <!-- <button

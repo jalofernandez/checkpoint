@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-row items-center justify-center">
+  <div class="flex flex-row items-center justify-center lg:hidden">
     <div class="relative sm:max-w-xl mx-auto">
       <nav x-data="{ open: false }">
         <button
