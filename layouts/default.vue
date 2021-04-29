@@ -1,7 +1,7 @@
 <template>
   <div>
     <BaseHeader />
-    <main class="dark:bg-gray-700">
+    <main class="mt-24 dark:bg-gray-700">
       <Nuxt />
     </main>
   </div>
