@@ -1,7 +1,7 @@
 <template>
   <div>
     <BaseHeader />
-    <main class="mt-24 mb-20 lg:mb-0 dark:bg-gray-700">
+    <main class="mt-20 mb-20 lg:mb-0 dark:bg-gray-700">
       <Nuxt />
     </main>
     <BaseFooter />
