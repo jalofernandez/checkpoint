@@ -37,7 +37,12 @@
         <a class="mr-5 hover:text-gray-900 cursor-pointer">First Link</a>
         <a class="mr-5 hover:text-gray-900 cursor-pointer">Second Link</a>
         <a class="mr-5 hover:text-gray-900 cursor-pointer">Third Link</a>
-        <a class="mr-5 hover:text-gray-900 cursor-pointer">Fourth Link</a>
+        <NuxtLink
+          class="mr-5 hover:text-gray-900 cursor-pointer"
+          to="/auth/login"
+        >
+          Login
+        </NuxtLink>
       </nav>
       <div class="flex flex-row items-center">
         <ThemeSwitch />
