@@ -29,10 +29,10 @@
               <b>Email</b> / Correo electrónico
             </label>
             <input
-              id=""
+              id="email"
               type="email"
               name=""
-              placeholder="Enter Email Address"
+              placeholder="email@gmail.com"
               class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none"
               autofocus
               autocomplete
@@ -44,10 +44,10 @@
               <b>Contraseña</b> / Password
             </label>
             <input
-              id=""
+              id="pass"
               type="password"
               name=""
-              placeholder="Enter Password"
+              placeholder="Pon tu contraseña supersecreta"
               minlength="6"
               class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none"
               required
@@ -65,7 +65,7 @@
             type="submit"
             class="w-full block bg-indigo-500 hover:bg-indigo-400 focus:bg-indigo-400 text-white font-semibold rounded-lg px-4 py-3 mt-6"
           >
-            Log In
+            Login
           </button>
         </form>
         <hr class="my-6 border-gray-300 w-full" />
@@ -106,7 +106,7 @@
                 d="M48 48L17 24l-4-3 35-10z"
               />
             </svg>
-            <span class="ml-4">Log in with Google</span>
+            <span class="ml-4">Login con Google</span>
           </div>
         </button>
         <p class="mt-8 text-gray-700 dark:text-white">
@@ -115,7 +115,7 @@
             href="#"
             class="underline text-blue-500 hover:text-blue-700 dark:hover:text-blue-500 font-semibold"
           >
-            Create an account
+            Crea una cuenta
           </a>
         </p>
       </div>
