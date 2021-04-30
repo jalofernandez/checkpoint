@@ -1,36 +1,11 @@
 <template>
-  <!-- <header
-    class="flex flex-row justify-between items-center p-3 dark:text-white dark:bg-gray-700"
-  >
-    <div class="flex flex-row items-center">
-      <LogoBrand class="logo-brand" />
-      <h1 class="brand-color-300">
-        <b class="pl-2 light:text-white">Check</b>Point
-      </h1>
-    </div>
-    <div class="flex flex-row items-center">
-      <ThemeSwitch />
-      <BurgerMenu />
-    </div>
-  </header> -->
   <header
     class="body-font w-full fixed top-0 z-50 bg-opacity-75 bg-white dark:bg-gray-700 dark:text-white backdrop-filter backdrop-blur-sm"
   >
     <div
       class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
     >
-      <NuxtLink
-        to="/"
-        class="flex title-font font-medium items-center mb-4 md:mb-0"
-      >
-        <LogoBrand class="logo-brand" />
-        <!-- <span class="ml-3 text-xl brand-color-300">
-          <b class="light:text-white">Check</b>Point
-        </span> -->
-        <h1 class="brand-color-300">
-          <b class="pl-2 light:text-white">Check</b>Point
-        </h1>
-      </NuxtLink>
+      <LogoBrand />
       <nav
         class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400 flex flex-wrap items-center text-base justify-center"
       >
@@ -74,11 +49,8 @@
 </template>
 
 <script>
-import LogoBrand from '@/assets/icons/haztunegociodigital-icon.svg?inline'
-
 export default {
   name: 'BaseHeader',
-  components: { LogoBrand },
 }
 </script>
 

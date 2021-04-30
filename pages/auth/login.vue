@@ -14,8 +14,12 @@
       class="bg-white dark:bg-gray-700 w-full md:max-w-md lg:max-w-full md:mx-auto md:w-1/2 xl:w-1/3 h-screen px-6 lg:px-16 xl:px-12 flex items-start justify-center"
     >
       <div class="w-full h-100">
+        <div class="flex justify-between items-center mt-12">
+          <LogoBrand />
+          <ThemeSwitch />
+        </div>
         <h1
-          class="text-xl md:text-2xl font-bold text-gray-700 dark:text-white leading-tight mt-12"
+          class="text-xl md:text-2xl font-bold text-gray-700 dark:text-white leading-tight mt-8"
         >
           Necesitamos conocer quién eres:
         </h1>
