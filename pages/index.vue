@@ -15,7 +15,7 @@
             class="flex flex-col w-full pb-3 pt-10 px-3 bg-gradient-to-t from-black text-gray-200"
           >
             <h3 class="text-base font-bold leading-5 uppercase">
-              Lorem, ipsum dolor sit amet elit foure consectetur adipisicing.
+              Nostromo carrier spaceship logo
             </h3>
             <div class="inline-flex items-center">
               <span class="capitalize font-base text-xs my-1 mr-1">
@@ -37,23 +37,6 @@
             <div class="flex flex-row justify-between">
               <div class="flex flex-row">
                 <div class="w-max inline-flex items-center">
-                  <svg
-                    class="w-4"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6 364 0z"
-                    />
-                  </svg>
-                  <span class="text-xs ml-1 antialiased">0</span>
-                </div>
-                <div class="w-max inline-flex ml-4 items-center">
                   <svg
                     class="w-4"
                     xmlns="http://www.w3.org/2000/svg"
