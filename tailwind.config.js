@@ -1,6 +1,11 @@
 module.exports = {
   theme: {
-    // "extends" to overwrite TailwindCSS styles by default
+    // "overwrites" TailwindCSS styles by default
+    // borderRadius: {
+    //   'xl': '0.75rem',
+    //   'full': '50%',
+    // },
+    // "extends" to add more TailwindCSS
     extend: {
       fill: (theme) => ({
         yellow: theme('colors.yellow.400'),

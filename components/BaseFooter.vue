@@ -6,8 +6,8 @@
       class="container mx-auto flex flex-wrap py-3 px-5 flex-row justify-around items-center"
     >
       <NuxtLink v-for="(link, index) in links" :key="index" :to="link.url">
-        <!-- A.) import images with a require method -->
-        <!-- <img
+        <!-- A.) import images with a require method
+        <img
           class="w-7 h-7 mx-auto"
           :src="getIcon(link.icon)"
           :alt="link.name"
