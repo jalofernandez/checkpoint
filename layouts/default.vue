@@ -2,7 +2,9 @@
   <div>
     <BaseHeader />
     <main class="mt-20 mb-20 lg:mb-0 dark:bg-gray-700">
-      <Nuxt />
+      <transition name="checkpoint-transition" appear>
+        <Nuxt />
+      </transition>
     </main>
     <BaseFooter />
   </div>
@@ -39,5 +41,31 @@ html.light {
 *::after {
   box-sizing: border-box;
   margin: 0;
+}
+
+.checkpoint-transition-enter-active {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.checkpoint-transition-leave-active {
+  -webkit-transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);
+  -moz-transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);
+  -ms-transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);
+  -o-transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);
+  transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.checkpoint-transition-enter,
+.checkpoint-transition-leave-to {
+  -webkit-transform: translateX(10px);
+  -moz-transform: translateX(10px);
+  -ms-transform: translateX(10px);
+  -o-transform: translateX(10px);
+  transform: translateX(10px);
+  opacity: 0;
 }
 </style>
