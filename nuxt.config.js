@@ -43,7 +43,35 @@ export default {
   modules: [
     // https://www.npmjs.com/package/@nuxtjs/svg
     '@nuxtjs/svg',
+    // https://firebase.nuxtjs.org/guide/getting-started
+    '@nuxtjs/firebase',
   ],
+
+  env: {
+    VUE_APP_FIREBASE_KEY: process.env.VUE_APP_FIREBASE_KEY,
+  },
+
+  firebase: {
+    // See your own config here:
+    // https://console.firebase.google.com/project/<your-project-id>/overview
+    config: {
+      apiKey: process.env.VUE_APP_FIREBASE_KEY,
+      authDomain: "checkpoint-webapp.firebaseapp.com",
+      projectId: "checkpoint-webapp",
+      storageBucket: "checkpoint-webapp.appspot.com",
+      messagingSenderId: "29364188116",
+      appId: "1:29364188116:web:b2148c6242dc62576b5c41",
+      measurementId: "G-GGX6CRC7DN"  
+    },
+    services: {
+      auth: true, // Just as example. Can be any other service.
+      firebase: true,
+      storage: true,
+      database: true,
+      analytics: true,
+      performance: true,
+    }
+  },
 
   colorMode: {
     preference: 'dark',
