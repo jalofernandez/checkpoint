@@ -206,6 +206,7 @@
 
 export default {
   // components: { ThemeSwitch, BaseLink },
+  layout: 'default',
 }
 </script>
 

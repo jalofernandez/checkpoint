@@ -126,5 +126,6 @@
 <script>
 export default {
   name: 'Login',
+  layout: 'Auth',
 }
 </script>
