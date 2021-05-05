@@ -125,6 +125,9 @@
 </template>
 
 <script>
+import firebase from 'firebase/app'
+import 'firebase/auth' // 👈 this could also be in your `firebase.js` file
+
 export default {
   name: 'Login',
   layout: 'Auth',
@@ -174,19 +177,22 @@ export default {
         }
       }
     },
-    // TODO: check the following code to login with Google:
-    // async loginWithGoogle() {
-    //   if (process.client) {
-    //     try {
-    //       const provider = new this.$fireModule.GoogleAuthProvider()
-    //       const result = await this.$fireAuth.signInWithPopup(provider)
-    //       console.log(result)
-    //     } catch {
-    //       // TODO: sohw error on a Toast or Modal dialog
-    //       console.error('Login error')
-    //     }
-    //   }
-    // },
+    // https://firebase.google.com/docs/auth/web/google-signin?hl=es
+    loginWithGoogle() {
+      // const provider = new this.$fire.auth.GoogleAuthProvider() // "this.$fire" not owrks use "firebase" instead
+      const provider = new firebase.auth.GoogleAuthProvider()
+      firebase
+        .auth()
+        .signInWithPopup(provider)
+        .then((result) => {
+          this.$router.push({
+            path: '/',
+          })
+        })
+        .catch((e) => {
+          alert(e.message)
+        })
+    },
     // Write & read from a Firebase real database:
     async sendToFirebaseDb() {
       const messageRef = this.$fire.database.ref('totalReviewCount')

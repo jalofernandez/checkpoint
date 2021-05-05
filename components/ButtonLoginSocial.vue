@@ -2,6 +2,7 @@
   <button
     type="button"
     class="w-full block bg-white hover:bg-gray-100 focus:bg-gray-100 text-gray-900 font-semibold rounded-lg px-4 py-3 border border-gray-300"
+    @click="$emit('click')"
   >
     <div class="flex items-center justify-center">
       <!-- A.) import images with a require method
@@ -23,7 +24,7 @@ export default {
   name: 'ButtonLoginSocial',
   components: {
     // A.) import images with a require method
-    // LogoGoogle,
+    // LogoGoogle
     // B.) import images with a dinamic component
     LogoGoogle: () => import('@/assets/icons/google.svg?inline'),
   },
