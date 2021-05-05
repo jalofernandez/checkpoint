@@ -29,6 +29,10 @@ export default {
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
+  router: {
+    middleware: ['auth'],
+  },
+
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/eslint
@@ -88,7 +92,17 @@ export default {
       measurementId: 'G-GGX6CRC7DN',  
     },
     services: {
-      auth: true, // Just as example. Can be any other service.
+      auth: {
+        persistence: 'local', // default
+        initialize: {
+          // onAuthStateChangedMutation: 'ON_AUTH_STATE_CHANGED_MUTATION',
+          onAuthStateChangedAction: 'onAuthStateChangedAction',
+          subscribeManually: false
+        },
+        ssr: false, // default
+        // emulatorPort: 9099,
+        // emulatorHost: 'http://localhost',
+      },
       firebase: true,
       storage: true,
       database: true,

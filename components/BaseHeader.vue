@@ -13,11 +13,21 @@
         <a class="mr-5 hover:text-gray-900 cursor-pointer">Second Link</a>
         <a class="mr-5 hover:text-gray-900 cursor-pointer">Third Link</a>
         <NuxtLink
+          v-if="!isUserLog"
           class="mr-5 hover:text-gray-900 cursor-pointer"
           to="/auth/login"
         >
           Login
         </NuxtLink>
+        <button
+          v-if="isUserLog"
+          type="button"
+          class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"
+          href=""
+          @click="logout()"
+        >
+          Logout
+        </button>
       </nav>
       <div class="flex flex-row items-center">
         <ThemeSwitch />
@@ -26,24 +36,9 @@
           src="@/assets/images/profile-default.png"
           alt="Profile pic by default"
         />
+        <span v-if="isUserLog">{{ $nuxt.$fire.auth.currentUser.email }}</span>
         <BurgerMenu />
       </div>
-      <!-- <button
-        class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"
-      >
-        Button
-        <svg
-          fill="none"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          class="w-4 h-4 ml-1"
-          viewBox="0 0 24 24"
-        >
-          <path d="M5 12h14M12 5l7 7-7 7"></path>
-        </svg>
-      </button> -->
     </div>
   </header>
 </template>
@@ -51,6 +46,20 @@
 <script>
 export default {
   name: 'BaseHeader',
+  data: () => ({
+    isUserLog: true,
+  }),
+  methods: {
+    async logout() {
+      alert('Log Out!')
+      try {
+        await this.$fire.auth.signOut()
+        this.isUserLog = false
+      } catch (e) {
+        alert(e)
+      }
+    },
+  },
 }
 </script>
 
