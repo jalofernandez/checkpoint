@@ -57,7 +57,7 @@
             <a
               href="#"
               class="text-sm font-semibold underline text-gray-700 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 focus:text-blue-700"
-              @click="sendToFirebaseDb()"
+              @click="forgotPassword()"
             >
               ¿Olvidaste la contraseña, gañán?
             </a>
@@ -105,11 +105,13 @@
         <hr class="my-6 border-gray-300 w-full" />
         <!-- <ButtonLoginSocial :type="'google'" @click="readFromRealtimeDb()" /> -->
         <ButtonLoginSocial :type="'google'" @click="loginWithGoogle()" />
+        <!-- to enable a link to SignUp form -->
         <p class="mt-8 text-gray-700 dark:text-white">
           ¿Necesitas una cuenta, amigo?
           <a
             href="#"
             class="underline text-blue-500 hover:text-blue-700 dark:hover:text-blue-500 font-semibold"
+            @click="sendToFirebaseDb()"
           >
             Crea una cuenta
           </a>
@@ -192,6 +194,16 @@ export default {
         .catch((e) => {
           alert(e.message)
         })
+    },
+    async forgotPassword() {
+      try {
+        await this.$fire.auth.sendPasswordResetEmail(this.auth.email)
+        alert(this.auth.email + ' :: reset Pass')
+        this.auth.error =
+          'Revisa tu bandeja de entrada para obtener el link para cambiar la contraseña'
+      } catch (e) {
+        this.auth.error = e
+      }
     },
     // Write & read from a Firebase real database:
     async sendToFirebaseDb() {
