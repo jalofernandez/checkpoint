@@ -103,7 +103,6 @@
           </button>
         </form>
         <hr class="my-6 border-gray-300 w-full" />
-        <!-- <ButtonLoginSocial :type="'google'" @click="readFromRealtimeDb()" /> -->
         <ButtonLoginSocial :type="'google'" @click="loginWithGoogle()" />
         <!-- to enable a link to SignUp form -->
         <p class="mt-8 text-gray-700 dark:text-white">
@@ -111,16 +110,11 @@
           <a
             href="#"
             class="underline text-blue-500 hover:text-blue-700 dark:hover:text-blue-500 font-semibold"
-            @click="sendToFirebaseDb()"
+            @click="alert('TODO: add SignUp page!')"
           >
             Crea una cuenta
           </a>
         </p>
-        <!-- Write & read from a Firebase real database: 
-        <p>
-          {{ text.text }}
-        </p>
-        -->
       </div>
     </div>
   </section>
@@ -205,30 +199,6 @@ export default {
         this.auth.error = e
       }
     },
-    // Write & read from a Firebase real database:
-    async sendToFirebaseDb() {
-      const messageRef = this.$fire.database.ref('totalReviewCount')
-      try {
-        await messageRef.set({
-          totalReviewCount: '724',
-        })
-      } catch (e) {
-        alert('¡Error! ' + e)
-        return
-      }
-      alert('¡Enviao!')
-    },
-    // async readFromRealtimeDb() {
-    //   const messageRef = this.$fire.database.ref('totalReviewCount')
-    //   try {
-    //     const snapshot = await messageRef.once('value')
-    //     alert(snapshot.val().totalReviewCount)
-    //     this.text.text = snapshot.val().totalReviewCount
-    //   } catch (e) {
-    //     alert('¡Error! ' + e)
-    //     // return
-    //   }
-    // },
   },
 }
 </script>
