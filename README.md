@@ -43,6 +43,12 @@ $ npm run start
 
 # generate static project
 $ npm run generate
+
+# launch Storybook to insolate components
+$ npm run story
+
+# launch Jest tests with changes listering
+$ npm run test:watch
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
