@@ -213,12 +213,17 @@ export default {
 </script>
 
 <style>
-/* Sample `apply` at-rules with Tailwind CSS
+/* Sample `apply` at-rules with Tailwind CSS 
 .container {
-@apply min-h-screen flex justify-center items-center text-center mx-auto;
+  @apply min-h-screen flex justify-center items-center text-center mx-auto;
 }
 */
-main section {
-  min-height: 50vh;
+
+.container {
+  @apply mx-auto;
 }
+
+/* main section {
+  min-height: 50vh;
+} */
 </style>
