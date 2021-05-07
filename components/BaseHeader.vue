@@ -9,9 +9,14 @@
       <nav
         class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400 flex flex-wrap items-center text-base justify-center"
       >
-        <a class="mr-5 hover:text-gray-900 cursor-pointer">Example Link</a>
         <NuxtLink
-          class="mr-5 hover:text-gray-900 cursor-pointer"
+          class="mr-5 text-green-500 hover:text-green-600 font-medium cursor-pointer"
+          to="/"
+        >
+          Dashboard
+        </NuxtLink>
+        <NuxtLink
+          class="mr-5 text-pink-500 hover:text-pink-600 font-medium cursor-pointer"
           to="/canessa/customers"
         >
           Canessa
@@ -23,24 +28,41 @@
         >
           Login
         </NuxtLink>
-        <button
-          v-if="isUserLog"
-          type="button"
-          class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"
-          href=""
-          @click="logout()"
-        >
-          Logout
-        </button>
       </nav>
       <div class="flex flex-row items-center">
-        <ThemeSwitch />
+        <div class="flex flex-col items-end justify-end mr-2">
+          <span
+            v-if="isUserLog"
+            class="font-medium text-xs text-gray-500 dark:text-white hover:text-gray-600 mb-1"
+          >
+            {{ $nuxt.$fire.auth.currentUser.email }}
+          </span>
+          <button
+            v-if="isUserLog"
+            type="button"
+            class="inline-flex items-center bg-red-100 hover:bg-red-200 border-0 py-0.5 px-2 focus:outline-none rounded text-xs text-red-500 hover:text-red-600 mt-4 md:mt-0"
+            @click="logout()"
+          >
+            Logout
+            <svg
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              class="w-4 h-4 ml-1"
+              viewBox="0 0 24 24"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
         <img
-          class="w-10 h-10"
+          class="w-10 h-10 mr-2"
           src="@/assets/images/profile-default.png"
           alt="Profile pic by default"
         />
-        <span v-if="isUserLog">{{ $nuxt.$fire.auth.currentUser.email }}</span>
+        <ThemeSwitch />
         <BurgerMenu />
       </div>
     </div>
@@ -71,5 +93,8 @@ export default {
 .logo-brand {
   width: 45px;
   height: 45px;
+}
+.nuxt-link-exact-active:not(.logo-link) {
+  display: none;
 }
 </style>
