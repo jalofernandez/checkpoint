@@ -28,17 +28,17 @@
                     class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal"
                   >
                     <th class="py-3 px-4 text-left">ID</th>
-                    <th class="py-3 px-4 text-center">Raza</th>
+                    <th class="py-3 px-4 text-left">Raza</th>
                     <th class="py-3 px-4 text-left">Perrete</th>
                     <th class="py-3 px-4 text-center">Caracter</th>
-                    <th class="py-3 px-4 text-center">Dueño</th>
-                    <th class="py-3 px-4 text-center">Notas</th>
-                    <th class="py-3 px-4 text-center">Citas</th>
+                    <th class="py-3 px-4 text-left">Dueño</th>
+                    <th class="py-3 px-4 text-left">Notas</th>
+                    <th class="py-3 px-4 text-right">Citas</th>
                     <!-- <th class="py-3 px-4 text-center">Acciones</th> -->
                   </tr>
                 </thead>
                 <tbody
-                  v-for="customer in customers.slice(0, 12)"
+                  v-for="customer in customers.slice(12, 26)"
                   :key="customer.customerId"
                   class="text-gray-600 text-base font-light"
                 >
