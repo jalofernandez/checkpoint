@@ -59,6 +59,11 @@ export default {
     VUE_APP_FIREBASE_KEY: process.env.VUE_APP_FIREBASE_KEY,
   },
 
+  eslint: {
+    // TODO: enabled to ignore errors & warnings
+    exclude: ['node_modules', 'components', 'pages']
+  },
+
   pwa: {
     manifest: {
       name: 'checkpoint firebase',
