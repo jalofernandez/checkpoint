@@ -13,6 +13,12 @@
     </section>
     <!-- customers TAILWINDCSS :: TABLE -->
     <section class="container">
+      <input
+        v-model="searchQuery"
+        type="text"
+        class="px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none"
+        placeholder="Para buscar o filtrar..."
+      />
       <div class="overflow-x-auto">
         <div
           class="min-w-screen flex items-center justify-center font-sans overflow-hidden"
@@ -20,9 +26,9 @@
           <div class="w-full">
             <div class="bg-white dark:text-white shadow-md rounded my-6">
               <table class="min-w-max w-full table-auto">
-                <caption>
+                <!-- <caption>
                   <span>{{ customers.length }}</span>
-                </caption>
+                </caption> -->
                 <thead>
                   <tr
                     class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal"
@@ -31,18 +37,24 @@
                     <th class="py-3 px-4 text-left">Raza</th>
                     <th class="py-3 px-4 text-left">Perrete</th>
                     <th class="py-3 px-4 text-center">Caracter</th>
-                    <th class="py-3 px-4 text-left">Dueño</th>
+                    <th class="py-3 px-4 text-left">Dueño</th> 
                     <th class="py-3 px-4 text-left">Notas</th>
                     <th class="py-3 px-4 text-right">Citas</th>
                     <!-- <th class="py-3 px-4 text-center">Acciones</th> -->
                   </tr>
                 </thead>
-                <tbody
-                  v-for="customer in customers.slice(12, 26)"
-                  :key="customer.customerId"
-                  class="text-gray-600 text-base font-light"
-                >
-                  <tr class="border-b border-gray-200 hover:bg-gray-100">
+                <tbody class="text-gray-600 text-base font-light">
+                  <!-- TODO: fix data to can filter them
+                  <tr
+                    v-for="(customer, index) in filteredCustomers"
+                    :key="index"
+                    class="border-b border-gray-200 hover:bg-gray-100"
+                  > -->
+                  <tr
+                    v-for="(customer, index) in customers.slice(26, 38)"
+                    :key="index"
+                    class="border-b border-gray-200 hover:bg-gray-100"
+                  >
                     <!-- Customer ID -->
                     <td class="py-3 px-4 text-left whitespace-nowrap">
                       <div class="flex items-center">
@@ -70,13 +82,8 @@
                             :src="require(`~/assets/doggies/bichon-maltes.png`)"
                           />
                         </div>
-                        <small
-                          v-for="(breed, index) in customer.doggie.breed"
-                          :key="index"
-                          class="mr-1"
-                        >
-                          <!-- {{ breed }}  -->
-                          {{ getDoggiePic(breed) }}
+                        <small class="mr-1">
+                          {{ [...customer.doggie.breed].sort().join(', ') }}
                         </small>
                       </div>
                     </td>
@@ -108,7 +115,7 @@
                         class="flex items-center"
                       >
                         <span
-                          v-if="owner.phone != null"
+                          v-if="owner.phone != ''"
                           class="text-sm font-medium mr-2"
                         >
                           {{ owner.phone }}
@@ -116,7 +123,7 @@
                         <span v-else class="text-sm text-gray-300 mr-2">
                           600000000
                         </span>
-                        <span v-if="owner.name != null" class="capitalize">
+                        <span v-if="owner.name != ''" class="capitalize">
                           {{ owner.name }}
                         </span>
                       </div>
@@ -213,9 +220,124 @@ export default {
   name: 'Customers',
   layout: 'Default',
   data: () => ({
+    searchQuery: '',
     customers: [],
+    // customers: [
+    //   {
+    //     "customerId": 1,
+    //     "doggie": {
+    //       "name": "andi",
+    //       "breed": ["bichón maltés"],
+    //       "mood": "Simpático jugetón",
+    //     },
+    //     "owner": [
+    //       {
+    //         "name": "lina",
+    //         "phone": 696620723,
+    //       }
+    //     ],
+    //     "comment": "Es superbueno :)",
+    //     "dates": [
+    //       {
+    //         "date": "2017-03-06T00:00:00-0400",
+    //         "groom": null,
+    //         "price": 28
+    //       }
+    //     ]
+    //   },
+    //   {
+    //     "customerId": 2,
+    //     "doggie": {
+    //       "name": "rondo",
+    //       "breed": ["pastor alemán"],
+    //       "mood": "Simpático jugetón",
+    //     },
+    //     "owner": [
+    //       {
+    //         "name": "Alberto",
+    //         "phone": 626625183
+    //       },
+    //       {
+    //         "name": "Laura",
+    //         "phone": 699356025
+    //       }
+    //     ],
+    //     "comment": "",
+    //     "dates": [
+    //       {
+    //         "date": "2017-03-06T00:00:00-0400",
+    //         "groom": null,
+    //         "price": 28
+    //       }
+    //     ]
+    //   },
+    //   {
+    //     "customerId": 3,
+    //     "doggie": {
+    //       "name": "zape",
+    //       "breed": ["mestizo/a","podenco"],
+    //       "mood": "",
+    //     },
+    //     "owner": [
+    //       {
+    //         "name": "Julia Durán",
+    //         "phone": "",
+    //       }
+    //     ],
+    //     "comment": "Mestizo de podenco",
+    //     "dates": [
+    //       {
+    //         "date": "2018-01-20T00:00:00-0400",
+    //         "groom": "calza 1/2 cráneo esculpir",
+    //         "price": 28
+    //       },
+    //       {
+    //         "date": "2017-07-03T00:00:00-0400",
+    //         "groom": "5f completo, 3f cráneo, 5f orejas",
+    //         "price": 26
+    //       }
+    //     ]
+    //   },
+    // ],
   }),
+  computed: {
+    filteredCustomers() {
+      return this.customers.filter(customer => {
+        const doggieName = customer.doggie.name.toLowerCase();
+        const doggieBreed = customer.doggie.breed.toString().toLowerCase();
+        const doggieMood = customer.doggie.mood.toLowerCase();
+        // const doggieOwner = this.getOwners(customer.owner);
+        const doggieComs = customer.comment.toLowerCase();
+
+        const searchTerm = this.searchQuery.toLowerCase();
+
+        return doggieName.includes(searchTerm) ||
+              doggieBreed.includes(searchTerm) ||
+              doggieMood.includes(searchTerm) ||
+              // doggieOwner.includes(searchTerm) ||
+              doggieComs.includes(searchTerm);
+      });
+    }
+  },
   methods: {
+    // TODO: check the following code to can filter by owner.name && owner.phone
+    // getOwners(ownerArr) {
+    //   console.log(ownerArr + ' :: ' + typeof ownerArr)
+    //   let i, owname, owphone
+    //   i = 0
+    //   owname = ''
+    //   owphone = ''
+    //   for (i; i < ownerArr.length; i++) {
+    //     owname += ownerArr.name[i]
+    //     owphone += ownerArr.phone[i].toString()
+    //     console.log(`
+    //       ${owname} :: ${typeof owname}
+    //       ${owphone} :: ${typeof owphone}
+    //     `)
+    //   }
+    //   return owners
+    // },
+
     // Write & read from a Firebase real database:
     // async sendToFirebaseDb() {
     //   const messageRef = this.$fire.database.ref('totalReviewCount')
@@ -229,6 +351,17 @@ export default {
     //   }
     //   alert('¡Enviao!')
     // },
+
+    // checkme() {
+    //   console.log('Owner length :: ' + this.customers[2].owner.length)
+    //   console.log(this.customers[1].customerId + ' :: ' + typeof this.customers[1].customerId)
+    //   console.log(this.customers[1].doggie.name + ' :: ' + typeof this.customers[1].doggie.name)
+    //   console.log(this.customers[1].doggie.breed + ' :: ' + typeof this.customers[1].doggie.breed)
+    //   console.log(this.customers[1].doggie.mood + ' :: ' + typeof this.customers[1].doggie.mood)
+    //   console.log('Owner :: ' + this.customers[1].owner + ' :: ' + typeof this.customers[1].owner)
+    //   console.log(this.customers[2].comment + ' :: ' + typeof this.customers[2].comment)
+    // },
+
     async readFromRealtimeDb() {
       const messageRef = this.$fire.database.ref()
       try {

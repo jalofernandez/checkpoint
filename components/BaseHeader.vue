@@ -10,7 +10,7 @@
         class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400 flex flex-wrap items-center text-base justify-center"
       >
         <NuxtLink
-          class="mr-5 text-green-500 hover:text-green-600 font-medium cursor-pointer"
+          class="mr-5 text-gray-700 hover:text-gray-900 font-medium cursor-pointer"
           to="/"
         >
           Dashboard
@@ -22,8 +22,20 @@
           Canessa
         </NuxtLink>
         <NuxtLink
+          class="mr-5 text-yellow-500 hover:text-yellow-600 font-medium cursor-pointer"
+          to="/jalofernandez/portfolio"
+        >
+          Jalofernandez
+        </NuxtLink>
+        <NuxtLink
+          class="mr-5 text-green-500 hover:text-green-600 font-medium cursor-pointer"
+          to="/haztunegociodigital/negocios"
+        >
+          #HazTuNegocioDigital
+        </NuxtLink>
+        <NuxtLink
           v-if="!isUserLog"
-          class="mr-5 hover:text-gray-900 cursor-pointer"
+          class="mr-5 text-gray-700 hover:text-gray-900 cursor-pointer"
           to="/auth/login"
         >
           Login

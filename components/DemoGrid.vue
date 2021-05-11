@@ -1,20 +1,31 @@
 <template>
-  <table>
+  <table class="min-w-max w-full table-auto">
     <thead>
-      <tr>
+      <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
         <th
-          v-for="key in columns"
+          v-for="(key, index) in columns"
+          :key="index"
           :class="{ active: sortKey == key }"
+          class="py-3 px-4 text-left"
           @click="sortBy(key)"
         >
           {{ key | capitalize }}
-          <span class="arrow" :class="sortOrders[key] > 0 ? 'asc' : 'dsc'"></span>
+          <span v-if="sortOrders[key] > 0">⬇️</span>
+          <span v-if="sortOrders[key] < 0">⬆️</span>
         </th>
       </tr>
     </thead>
     <tbody>
-      <tr v-for="entry in filteredData">
-        <td v-for="key in columns">
+      <tr
+        v-for="(entry, index) in filteredData"
+        :key="index"
+        class="border-b border-gray-200 hover:bg-gray-100"
+      >
+        <td
+          v-for="(key, index) in columns"
+          :key="index"
+          class="py-3 px-4 text-left whitespace-nowrap"
+        >
           {{ entry[key] }}
         </td>
       </tr>
@@ -80,7 +91,7 @@ export default {
     sortBy: function (key) {
       this.sortKey = key
       this.sortOrders[key] = this.sortOrders[key] * -1
-    }
+    },
   }
 }
 </script>
