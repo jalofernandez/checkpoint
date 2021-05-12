@@ -3,7 +3,7 @@
     <div class="relative sm:max-w-xl mx-auto">
       <nav x-data="{ open: false }">
         <button
-          class="bg-white text-gray-500 w-10 h-10 relative focus:outline-none dark:bg-gray-700 dark:text-white"
+          class="bg-white text-gray-500 w-10 h-10 relative focus:outline-none dark:bg-navy-900 dark:text-white"
           @click="open = !open"
         >
           <span class="sr-only">Open main menu</span>

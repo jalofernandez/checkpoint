@@ -1,6 +1,6 @@
 <template>
   <div>
-    <main class="dark:bg-gray-700">
+    <main class="bg-white dark:bg-navy-900">
       <transition name="checkpoint-transition" appear>
         <Nuxt />
       </transition>

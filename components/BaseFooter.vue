@@ -1,6 +1,6 @@
 <template>
   <footer
-    class="body-font w-full fixed bottom-0 z-50 border-t dark:border-gray-500 bg-opacity-75 bg-white dark:bg-gray-700 dark:text-white backdrop-filter backdrop-blur-sm lg:hidden"
+    class="body-font w-full fixed bottom-0 z-50 border-t dark:border-gray-500 bg-opacity-75 bg-white dark:bg-navy-900 dark:text-white backdrop-filter backdrop-blur-sm lg:hidden"
   >
     <div
       class="container mx-auto flex flex-wrap py-3 px-5 flex-row justify-around items-center"

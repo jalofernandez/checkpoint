@@ -91,18 +91,18 @@
         </div>
       </div>
     </section> -->
-    <section class="w-full bg-gray-100 dark:bg-gray-800 rounded-t-full">
+    <section class="w-full bg-gray-100 dark:bg-navy-700 rounded-t-full">
       <div
         class="container min-h-screen flex flex-wrap -m-4 items-center justify-around"
       >
         <article
           v-for="project in projects"
           :key="project.name"
-          class="relative bg-white py-6 px-6 rounded-2xl w-64 my-4 shadow-xl"
+          class="relative bg-white dark:bg-navy-900 py-6 px-6 rounded-2xl w-64 my-4 shadow-xl"
         >
           <NuxtLink :to="`/${project.url}`">
             <div
-              class="text-white flex items-center absolute rounded-full py-4 px-4 shadow-xl bg-pink-500 left-4 -top-6"
+              class="text-navy-700 dark:text-sky-300 flex items-center absolute rounded-full py-4 px-4 shadow-xl bg-pink-500 left-4 -top-6"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -123,7 +123,7 @@
               <p class="text-xl font-semibold my-2">
                 {{ project.name }}
               </p>
-              <div class="flex space-x-2 text-gray-400 text-sm">
+              <div class="flex space-x-2 text-navy-900 dark:text-sky-300 text-sm">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="h-5 w-5"
@@ -146,7 +146,7 @@
                 </svg>
                 <p>{{ project.web }}</p>
               </div>
-              <div class="flex space-x-2 text-gray-400 text-sm my-3">
+              <div class="flex space-x-2 text-navy-900 dark:text-sky-300 text-sm my-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="h-5 w-5"
@@ -163,10 +163,12 @@
                 </svg>
                 <p>version: {{ project.version }}</p>
               </div>
-              <div class="border-t-2"></div>
+              <!-- <div class="border-t-2"></div> -->
               <div class="flex justify-between">
                 <div class="my-2">
-                  <p class="font-semibold text-base mb-2">Team Member</p>
+                  <p class="font-semibold text-base text-navy-700 dark:text-navy-700 mb-2">
+                    Team Member
+                  </p>
                   <div class="flex space-x-2">
                     <img
                       src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
@@ -179,8 +181,10 @@
                   </div>
                 </div>
                 <div class="my-2">
-                  <p class="font-semibold text-base mb-2">Progress</p>
-                  <div class="text-base text-gray-400 font-semibold">
+                  <p class="font-semibold text-base text-navy-700 dark:text-navy-700 mb-2">
+                    Progress
+                  </p>
+                  <div class="text-base text-navy-900 dark:text-sky-300 font-semibold">
                     <p>34%</p>
                   </div>
                 </div>

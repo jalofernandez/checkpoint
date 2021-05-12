@@ -3,7 +3,7 @@
     <label
       v-if="label"
       :for="name"
-      class="block text-gray-700 dark:text-white"
+      class="block text-gray-700 dark:text-sky-300"
     >
       {{ label }}
     </label>
@@ -14,7 +14,7 @@
       :type="type"
       :name="name"
       :placeholder="placeholder"
-      class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none"
+      class="w-full px-4 py-3 rounded-lg bg-gray-200 dark:bg-navy-700 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none"
     />
   </div>
 </template>

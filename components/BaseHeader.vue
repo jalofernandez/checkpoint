@@ -1,6 +1,6 @@
 <template>
   <header
-    class="body-font w-full fixed top-0 z-50 bg-opacity-75 bg-white dark:bg-gray-700 dark:text-white backdrop-filter backdrop-blur-sm"
+    class="body-font w-full fixed top-0 z-50 bg-opacity-75 bg-white dark:bg-navy-900 dark:text-white backdrop-filter backdrop-blur-sm"
   >
     <div
       class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"

@@ -10,7 +10,7 @@
       />
     </div>
     <div
-      class="bg-white dark:bg-gray-700 w-full md:max-w-md lg:max-w-full md:mx-auto md:w-1/2 xl:w-1/3 h-screen mx-6 lg:mx-16 xl:mx-12 flex items-start justify-center relative"
+      class="bg-white dark:bg-navy-900 w-full md:max-w-md lg:max-w-full md:mx-auto md:w-1/2 xl:w-1/3 h-screen mx-6 lg:mx-16 xl:mx-12 flex items-start justify-center relative"
     >
       <!-- Login :: USER van.vizcaya@gmail.com" PASS "refwref34ref" -->
       <transition name="checkpoint-fade">
@@ -20,13 +20,13 @@
             <ThemeSwitch />
           </div>
           <h1
-            class="text-xl md:text-2xl font-bold text-gray-700 dark:text-white leading-tight mt-8"
+            class="text-xl md:text-2xl font-bold text-navy-700 dark:text-sky-300 leading-tight mt-8"
           >
             Necesitamos conocer quién eres:
           </h1>
           <form class="mt-6" onsubmit="return false;">
             <div>
-              <label class="block text-gray-700 dark:text-white">
+              <label class="block text-navy-700 dark:text-sky-300">
                 <b>Email</b> / Correo electrónico
               </label>
               <input
@@ -35,13 +35,13 @@
                 type="email"
                 name=""
                 placeholder="email@gmail.com"
-                class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none"
+                class="w-full px-4 py-3 rounded-lg bg-gray-200 dark:bg-navy-700 mt-2 border focus:border-blue-500 focus:bg-navy-700 focus:outline-none"
                 autofocus
                 autocomplete
               />
             </div>
             <div class="mt-4">
-              <label class="block text-gray-700 dark:text-white">
+              <label class="block text-gray-700 dark:text-sky-300">
                 <b>Contraseña</b> / Password
               </label>
               <input
@@ -51,13 +51,13 @@
                 name=""
                 placeholder="Pon tu contraseña supersecreta"
                 minlength="6"
-                class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none"
+                class="w-full px-4 py-3 rounded-lg bg-gray-200 dark:bg-navy-700 mt-2 border focus:border-blue-500 focus:bg-navy-700 focus:outline-none"
               />
             </div>
             <div class="text-right mt-2">
               <a
                 href="#"
-                class="text-sm font-semibold underline text-gray-700 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 focus:text-blue-700"
+                class="text-sm font-semibold underline text-navy-700 dark:text-sky-300 hover:text-blue-700 dark:hover:text-blue-500 focus:text-blue-700"
                 @click="forgotPassword()"
               >
                 ¿Olvidaste la contraseña, gañán?
@@ -106,7 +106,7 @@
           <hr class="my-6 border-gray-300 w-full" />
           <ButtonLoginSocial :type="'google'" @click="loginWithGoogle()" />
           <!-- to enable a link to SignUp form -->
-          <p class="mt-8 text-gray-700 dark:text-white">
+          <p class="mt-8 text-gray-700 dark:text-sky-300">
             ¿Necesitas una cuenta, amigo?
             <a
               href="#"
@@ -126,7 +126,7 @@
             <ThemeSwitch />
           </div>
           <h1
-            class="text-xl md:text-2xl font-bold text-gray-700 dark:text-white leading-tight mt-8"
+            class="text-xl md:text-2xl font-bold text-gray-700 dark:text-sky-300 leading-tight mt-8"
           >
             Regístrate aquí:
           </h1>
@@ -168,7 +168,7 @@
           </form>
           <hr class="my-6 border-gray-300 w-full" />
           <!-- to enable a link to SignUp form -->
-          <p class="mt-8 text-gray-700 dark:text-white">
+          <p class="mt-8 text-gray-700 dark:text-sky-300">
             Ya tienes cuenta y sólo quieres logearte?
             <a
               href="#"
