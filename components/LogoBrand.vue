@@ -4,14 +4,14 @@
     class="logo-link flex title-font font-medium items-center mb-4 md:mb-0"
   >
     <LogoImage class="logo-brand" />
-    <span class="ml-3 text-xl brand-color-300 dark:text-white">
+    <span class="text-xl brand-color-300 dark:text-white">
       <b>Check</b>Point
     </span>
   </NuxtLink>
 </template>
 
 <script>
-import LogoImage from '@/assets/icons/haztunegociodigital-icon.svg?inline'
+import LogoImage from '@/assets/icons/checkpoint--logotype.svg?inline'
 
 export default {
   name: 'LogoBrand',
