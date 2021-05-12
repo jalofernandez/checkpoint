@@ -47,6 +47,7 @@
             v-if="isUserLog"
             class="font-medium text-xs text-gray-500 dark:text-white hover:text-gray-600 mb-1"
           >
+            <b class="mr-1">{{ $nuxt.$fire.auth.currentUser.displayName }}</b>
             {{ $nuxt.$fire.auth.currentUser.email }}
           </span>
           <button

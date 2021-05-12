@@ -10,12 +10,12 @@
       />
     </div>
     <div
-      class="bg-white dark:bg-navy-900 w-full md:max-w-md lg:max-w-full md:mx-auto md:w-1/2 xl:w-1/3 h-screen mx-6 lg:mx-16 xl:mx-12 flex items-start justify-center relative"
+      class="bg-white dark:bg-navy-900 w-5/6 md:max-w-md lg:max-w-full md:mx-auto md:w-1/2 xl:w-1/3 h-screen mx-6 lg:mx-16 xl:mx-12 flex items-start justify-center relative"
     >
       <!-- Login :: USER van.vizcaya@gmail.com" PASS "refwref34ref" -->
       <transition name="checkpoint-fade">
-        <div v-if="isLogin" class="w-full h-100 absolute z-0">
-          <div class="flex justify-between items-center mt-12">
+        <div v-if="isLogin" class="w-full h-100 absolute z-0 mt-2 md:mt-12">
+          <div class="flex justify-between items-center md:mt-12">
             <LogoBrand />
             <ThemeSwitch />
           </div>
@@ -25,35 +25,22 @@
             Necesitamos conocer quién eres:
           </h1>
           <form class="mt-6" onsubmit="return false;">
-            <div>
-              <label class="block text-navy-700 dark:text-sky-300">
-                <b>Email</b> / Correo electrónico
-              </label>
-              <input
-                id="email"
+            <BaseInput
                 v-model="auth.email"
+                class="mt-4"
                 type="email"
-                name=""
-                placeholder="email@gmail.com"
-                class="w-full px-4 py-3 rounded-lg bg-gray-200 dark:bg-navy-700 mt-2 border focus:border-blue-500 focus:bg-navy-700 focus:outline-none"
-                autofocus
-                autocomplete
+                name="email"
+                label="Email / Correo electrónico"
+                placeholder="tu_email@gmail.com"
               />
-            </div>
-            <div class="mt-4">
-              <label class="block text-gray-700 dark:text-sky-300">
-                <b>Contraseña</b> / Password
-              </label>
-              <input
-                id="pass"
+              <BaseInput
                 v-model="auth.password"
+                class="mt-4"
                 type="password"
-                name=""
-                placeholder="Pon tu contraseña supersecreta"
-                minlength="6"
-                class="w-full px-4 py-3 rounded-lg bg-gray-200 dark:bg-navy-700 mt-2 border focus:border-blue-500 focus:bg-navy-700 focus:outline-none"
+                name="password"
+                label="Contraseña / Password"
+                placeholder="Escribe tu contraseña supersecreta"
               />
-            </div>
             <div class="text-right mt-2">
               <a
                 href="#"
@@ -120,8 +107,8 @@
       </transition>
       <!-- Register -->
       <transition name="checkpoint-fade">
-        <div v-if="!isLogin" class="w-full h-100 absolute z-10">
-          <div class="flex justify-between items-center mt-12">
+        <div v-if="!isLogin" class="w-full h-100 absolute z-10 mt-2 md:mt-12">
+          <div class="flex justify-between items-center">
             <LogoBrand />
             <ThemeSwitch />
           </div>
@@ -132,7 +119,7 @@
           </h1>
           <form class="mt-6" onsubmit="return false;">
             <BaseInput
-              v-model="register.name"
+              v-model="auth.name"
               class="mt-4"
               type="text"
               name="name"
@@ -140,7 +127,7 @@
               placeholder="rickUnPalmo"
             />
             <BaseInput
-              v-model="register.email"
+              v-model="auth.email"
               class="mt-4"
               type="email"
               name="email"
@@ -148,7 +135,7 @@
               placeholder="email@gmail.com"
             />
             <BaseInput
-              v-model="register.password"
+              v-model="auth.password"
               class="mt-4"
               type="password"
               name="password"
@@ -169,7 +156,7 @@
           <hr class="my-6 border-gray-300 w-full" />
           <!-- to enable a link to SignUp form -->
           <p class="mt-8 text-gray-700 dark:text-sky-300">
-            Ya tienes cuenta y sólo quieres logearte?
+            ¿Ya tienes cuenta y sólo quieres logearte?
             <a
               href="#"
               class="underline text-blue-500 hover:text-blue-700 dark:hover:text-blue-500 font-semibold"
@@ -194,15 +181,11 @@ export default {
   data: () => ({
     isLogin: true,
     auth: {
+      name: '',
       email: '',
       password: '',
       // filled: true,
       error: '',
-    },
-    register: {
-      name: '',
-      email: '',
-      password: '',
     },
   }),
   methods: {
@@ -275,20 +258,37 @@ export default {
     // https://firebase.google.com/docs/auth/web/password-auth?hl=es
     async registerUser() {
       console.log(`
-        ${this.register.name} :: ${typeof this.register.name}
-        ${this.register.email} :: ${typeof this.register.email}
-        ${this.register.password} :: ${typeof this.register.password}
+        ${this.auth.name} :: ${typeof this.auth.name}
+        ${this.auth.email} :: ${typeof this.auth.email}
+        ${this.auth.password} :: ${typeof this.auth.password}
       `)
       try {
         await this.$fire.auth.createUserWithEmailAndPassword(
-          this.register.email,
-          this.register.password
+          this.auth.email,
+          this.auth.password
         )
-        alert('Nuevo ususario: ' + this.register.email + ' :: ' + this.register.password)
+        alert('Nuevo ususario: ' + this.auth.email + ' :: ' + this.auth.password)
+        await this.updateUserName(this.auth.name)
+        // console.log('🔥 : ' + this.$fire.auth.currentUser.displayName + ' : 🔥')
       } catch (e) {
         this.auth.error = e
       }
-    }
+    },
+    // https://firebase.google.com/docs/auth/web/manage-users?hl=es
+    updateUserName(name) {
+      const user = firebase.auth().currentUser
+      user.updateProfile({
+        displayName: name,
+      })
+      .then((name) => {
+        alert('¡Nombre de usuario actualizado a: "' + name + '"!')
+      })
+      .catch((e) => {
+        this.auth.error = e.message
+      })
+    },
+    // https://firebase.google.com/docs/auth/web/manage-users?hl=es#send_a_user_a_verification_email
+    // TODO: add asap user email validation + 
   },
 }
 </script>
@@ -299,10 +299,6 @@ export default {
   transition: opacity .33s
 }
 
-/* .checkpoint-fade-leave-active {
-  transition: opacity .2s
-} */
-  
 .checkpoint-fade-enter,
 .checkpoint-fade-leave-to {
   opacity: 0

@@ -1,7 +1,7 @@
 <template>
   <button
     type="button"
-    class="w-full block bg-white hover:bg-gray-100 focus:bg-gray-100 text-gray-900 font-semibold rounded-lg px-4 py-3 border border-gray-300"
+    class="w-full block rounded-lg px-4 py-3 bg-white hover:bg-gray-100 focus:bg-gray-100 text-navy-900 font-semibold border border-gray-300"
     @click="$emit('click')"
   >
     <div class="flex items-center justify-center">

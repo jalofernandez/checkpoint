@@ -1,7 +1,7 @@
 <template>
   <NuxtLink
     to="/"
-    class="logo-link flex title-font font-medium items-center mb-4 md:mb-0"
+    class="logo-link flex title-font font-medium items-center"
   >
     <LogoImage class="logo-brand" />
     <span class="text-xl text-navy-900 dark:text-white">
