@@ -15,7 +15,7 @@
       <!-- Login :: USER van.vizcaya@gmail.com" PASS "refwref34ref" -->
       <transition name="checkpoint-fade">
         <div v-if="isLogin" class="w-full h-100 absolute z-0 mt-2 md:mt-12">
-          <div class="flex justify-between items-center md:mt-12">
+          <div class="flex justify-between items-center">
             <LogoBrand />
             <ThemeSwitch />
           </div>
