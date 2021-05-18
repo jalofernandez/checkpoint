@@ -53,6 +53,8 @@ export default {
     '@nuxtjs/svg',
     // https://firebase.nuxtjs.org/guide/getting-started
     '@nuxtjs/firebase',
+    // https://www.npmjs.com/package/@nuxtjs/toast
+    '@nuxtjs/toast',
   ],
 
   env: {
@@ -114,6 +116,11 @@ export default {
       analytics: true,
       performance: true,
     }
+  },
+
+  toast: {
+    position: 'top-center',
+    duration : 2000,
   },
 
   colorMode: {
