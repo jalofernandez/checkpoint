@@ -79,7 +79,7 @@ export default {
       return text.replace(re, matchedText => `<strong>${matchedText}</strong>`);
     },
     getData() {
-      alert('Load data from RealTimeDB in firebase, folk!')
+      this.$toast.info('Load data from RealTimeDB in firebase, folk!')
     },
     // TODO: set data to firebase´s RealTimeDB:
     // async readFromRealtimeDb() {

@@ -366,10 +366,11 @@ export default {
       const messageRef = this.$fire.database.ref()
       try {
         const snapshot = await messageRef.once('value')
-        alert('RealTimeDB conextion success! -> ' + snapshot.val())
+        // alert('RealTimeDB conextion success! -> ' + snapshot.val())
+        this.$toast.success('RealTimeDB conextion success! -> ' + snapshot.val())
         this.customers = snapshot.val()
       } catch (e) {
-        alert('Error get data from RealTimeDB! -> ' + e.message)
+        this.$toast.error('Error get data from RealTimeDB! -> ' + e.message)
         // return
       }
     },

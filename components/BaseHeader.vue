@@ -90,12 +90,12 @@ export default {
   }),
   methods: {
     async logout() {
-      alert('Log Out!')
+      this.$toast.success('Log Out!')
       try {
         await this.$fire.auth.signOut()
         this.isUserLog = false
       } catch (e) {
-        alert(e)
+        this.$toast.error(e.message)
       }
     },
   },

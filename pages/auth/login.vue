@@ -202,31 +202,32 @@ export default {
       // }
       // this.auth.filled = true
       try {
+        this.$toast.show('Logging in... Just wait a few seconds!', { duration : 2000 })
         await this.$fire.auth.signInWithEmailAndPassword(
           this.auth.email,
           this.auth.password
         )
-        alert(this.auth.email + ' ' + this.auth.password + ' :: Success')
+        this.$toast.clear()
+        this.$toast.success('Successfully authenticated: "' + this.auth.email + '"')
         this.$router.push({
           path: '/',
         })
       } catch (e) {
         // TODO: handle all statusCodes & errorMessages in Firebase:
         // https://gist.github.com/Albejr/a38cdeac247ef177986c99629680afb4
+        this.$toast.clear()
         this.auth.error = e
-        // alert(e)
         if (typeof e === 'object' && typeof e.code === 'string') {
           switch (e.code) {
             case 'auth/invalid-email':
-              return (e.message = 'Introduce un email y que sea válido.')
+              e.message = 'Introduce un email y que sea válido.'
             case 'auth/invalid-password':
-              return (e.message =
-                'El email es incorrecto o el usuario no existe.')
+              e.message = 'El email es incorrecto o el usuario no existe.'
             case 'auth/wrong-password':
-              return (e.message =
-                'El email es incorrecto o el usuario no tiene aún contraseña.')
+              e.message = 'El email es incorrecto o el usuario no tiene aún contraseña.'
           }
         }
+        this.$toast.error(e.message)
       }
     },
     // https://firebase.google.com/docs/auth/web/google-signin?hl=es
@@ -242,17 +243,18 @@ export default {
           })
         })
         .catch((e) => {
-          alert(e.message)
+          this.$toast.error(e.message)
         })
     },
     async forgotPassword() {
       try {
         await this.$fire.auth.sendPasswordResetEmail(this.auth.email)
-        alert(this.auth.email + ' :: reset Pass')
-        this.auth.error =
-          'Revisa tu bandeja de entrada para obtener el link para cambiar la contraseña'
+        // this.auth.error =
+        //   'Revisa tu bandeja de entrada para obtener el link para cambiar la contraseña'
+        this.$toast.success('Revisa tu bandeja de entrada para obtener el link para cambiar la contraseña')
       } catch (e) {
         this.auth.error = e
+        this.$toast.error(e.message)
       }
     },
     // https://firebase.google.com/docs/auth/web/password-auth?hl=es
@@ -267,11 +269,12 @@ export default {
           this.auth.email,
           this.auth.password
         )
-        alert('Nuevo ususario: ' + this.auth.email + ' :: ' + this.auth.password)
+        this.$toast.success('Nuevo ususario: ' + this.auth.email + ' :: ' + this.auth.password)
         await this.updateUserName(this.auth.name)
         // console.log('🔥 : ' + this.$fire.auth.currentUser.displayName + ' : 🔥')
       } catch (e) {
         this.auth.error = e
+        this.$toast.error(e.message)
       }
     },
     // https://firebase.google.com/docs/auth/web/manage-users?hl=es
@@ -281,14 +284,15 @@ export default {
         displayName: name,
       })
       .then((name) => {
-        alert('¡Nombre de usuario actualizado a: "' + name + '"!')
+        this.$toast.success('¡Nombre de usuario actualizado a: "' + name + '"!')
       })
       .catch((e) => {
         this.auth.error = e.message
+        this.$toast.error(e.message)
       })
     },
     // https://firebase.google.com/docs/auth/web/manage-users?hl=es#send_a_user_a_verification_email
-    // TODO: add asap user email validation + 
+    // TODO: add asap user email validation
   },
 }
 </script>
