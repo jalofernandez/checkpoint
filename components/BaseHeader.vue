@@ -47,8 +47,8 @@
             v-if="isUserLog"
             class="font-medium text-xs text-gray-500 dark:text-white hover:text-gray-600 mb-1"
           >
-            <b class="mr-1">{{ $nuxt.$fire.auth.currentUser.displayName }}</b>
-            {{ $nuxt.$fire.auth.currentUser.email }}
+            <b class="mr-1 truncate max-w-md inline-block">{{ $nuxt.$fire.auth.currentUser.displayName }}</b>
+            <span>{{ $nuxt.$fire.auth.currentUser.email }}</span>
           </span>
           <button
             v-if="isUserLog"

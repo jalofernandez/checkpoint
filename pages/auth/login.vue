@@ -142,8 +142,9 @@
               label="Contraseña / Password"
               placeholder="Invéntate contraseña supersecreta"
             />
-            <p class="text-red-500 pt-2">
-              <b>{{ auth.error }}</b>
+            <p class="pt-2">
+              <b v-if="auth.error !== ''" class="text-red-500">{{ auth.error }}</b>
+              <b v-if="auth.success !== ''" class="text-green-600">{{ auth.success }}</b>
             </p>
             <button
               type="submit"
@@ -186,6 +187,7 @@ export default {
       password: '',
       // filled: true,
       error: '',
+      success: '',
     },
   }),
   methods: {
@@ -249,9 +251,9 @@ export default {
     async forgotPassword() {
       try {
         await this.$fire.auth.sendPasswordResetEmail(this.auth.email)
-        // this.auth.error =
-        //   'Revisa tu bandeja de entrada para obtener el link para cambiar la contraseña'
-        this.$toast.success('Revisa tu bandeja de entrada para obtener el link para cambiar la contraseña')
+        const checkInboxToPass = 'Revisa tu bandeja de entrada para obtener el link para cambiar la contraseña'
+        this.auth.success = checkInboxToPass
+        this.$toast.success(checkInboxToPass)
       } catch (e) {
         this.auth.error = e
         this.$toast.error(e.message)
@@ -269,9 +271,14 @@ export default {
           this.auth.email,
           this.auth.password
         )
-        this.$toast.success('Nuevo ususario: ' + this.auth.email + ' :: ' + this.auth.password)
+        this.$toast.success('🔥 Nuevo ususario: ' + this.auth.email + ' :: ' + this.auth.password)
         await this.updateUserName(this.auth.name)
-        // console.log('🔥 : ' + this.$fire.auth.currentUser.displayName + ' : 🔥')
+        this.isLogin = true
+        const newUser =
+          '¡Ya estás registrado, ' + this.auth.name + '! Ahora puedes logearte con el usuario y contraseña que acabas de registrar :)'
+        this.$toast.info(newUser)
+        this.auth.error = ''
+        this.auth.success = newUser
       } catch (e) {
         this.auth.error = e
         this.$toast.error(e.message)

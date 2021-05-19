@@ -120,7 +120,7 @@ export default {
 
   toast: {
     position: 'top-center',
-    duration : 2000,
+    duration : 4000,
   },
 
   colorMode: {
