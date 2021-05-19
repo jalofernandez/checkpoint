@@ -49,7 +49,7 @@ export default {
       },
       {
         name: 'Profile',
-        url: '/',
+        url: `/auth/${$nuxt.$fire.auth.currentUser.uid}`,
         component: 'IconProfile',
       },
     ],

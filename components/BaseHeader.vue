@@ -43,13 +43,14 @@
       </nav>
       <div class="flex flex-row items-center">
         <div class="flex flex-col items-end justify-end mr-2">
-          <span
+          <NuxtLink
             v-if="isUserLog"
+            :to="`/auth/${$nuxt.$fire.auth.currentUser.uid}`"
             class="font-medium text-xs text-gray-500 dark:text-white hover:text-gray-600 mb-1"
           >
             <b class="mr-1 truncate max-w-md inline-block">{{ $nuxt.$fire.auth.currentUser.displayName }}</b>
             <span>{{ $nuxt.$fire.auth.currentUser.email }}</span>
-          </span>
+          </NuxtLink>
           <button
             v-if="isUserLog"
             type="button"
@@ -71,6 +72,13 @@
           </button>
         </div>
         <img
+          v-if="$nuxt.$fire.auth.currentUser.photoUrl"
+          class="w-10 h-10 mr-2"
+          :src="$nuxt.$fire.auth.currentUser.photoUrl"
+          alt="Google Profile pic as an avatar"
+        />
+        <img
+          v-else
           class="w-10 h-10 mr-2"
           src="@/assets/images/profile-default.png"
           alt="Profile pic by default"
