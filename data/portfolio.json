@@ -1,0 +1,625 @@
+[
+  {
+    "id": 1,
+    "brand": "Movistar",
+    "img": "movistar-upplication_promo-rollup_by-jalofernandez.jpg",
+    "title": "+ Upplication promo rollup",
+    "tags": ["all", "graph"]
+  },
+  {
+    "id": 20,
+    "brand": "British Knights",
+    "img": "britishknights_packaging-shoesbox_by-jalofernandez.jpg",
+    "title": "shoesbox packaging",
+    "tags": ["all", "pack", "photo"]
+  },
+  {
+    "id": 2,
+    "brand": "Upplication",
+    "img": "upplication-business-card-cover_by-jalofernandez.jpg",
+    "title": "business card cover",
+    "tags": ["all", "layout"]
+  },
+  {
+    "id": 3,
+    "brand": "Upplication",
+    "img": "upplication-deves-business-card_by-jalofernandez.jpg",
+    "title": "developers business card",
+    "tags": ["all", "layout"]
+  },
+  {
+    "id": 19,
+    "brand": "Widitrade",
+    "img": "ecomerzpro_email-template-marketplace_by-jalofernandez.jpg",
+    "title": "demail layout",
+    "tags": ["all", "layout"]
+  },
+  {
+    "id": 4,
+    "brand": "Upplication",
+    "img": "upplication_pwa-infography_by-jalofernandez.jpg",
+    "title": "PWA infography layout",
+    "tags": ["all", "layout"]
+  },
+  {
+    "id": 5,
+    "brand": "Upplication",
+    "img": "upplication-app-restaurant-module_by-jalofernandez.png",
+    "title": "app (Restaurant module)",
+    "tags": ["all", "web"]
+  },
+  {
+    "id": 42,
+    "brand": "British Knights",
+    "img": "britishknights_promo-collection_by-jalofernandez.jpg",
+    "title": "promo poster @jalofernandez",
+    "tags": ["all", "photo"]
+  },
+  {
+    "id": 43,
+    "brand": "Salón de Juegos",
+    "img": "salondejuegos_bcard-invitation_by-jalofernandez.jpg",
+    "title": "business card + invitation",
+    "tags": ["all", "layout"]
+  },
+  {
+    "id": 44,
+    "brand": "La Parada de los Monstruos",
+    "img": "laparadadelosmonstruos-bar_flyer-halloween_by-jalofernandez.jpg",
+    "title": "promo flyer",
+    "tags": ["all", "layout"]
+  },
+  {
+    "id": 37,
+    "brand": "Domolock",
+    "img": "domolock-app_concept-logo_by-jalofernandez.jpg",
+    "title": "app concept logo",
+    "tags": ["all", "graph"]
+  },
+  {
+    "id": 38,
+    "brand": "Punto y Coma",
+    "img": "puntoycoma_comic_strip_n32_by-jalofernandez.jpg",
+    "title": "magazine comic strip",
+    "tags": ["all", "graph"]
+  },
+  {
+    "id": 39,
+    "brand": "British Knights",
+    "img": "brithisknights_hoddie-specs_by-jalofernandez.jpg",
+    "title": "hoddie chart sheet",
+    "tags": ["all", "layout", "graph"]
+  },
+  {
+    "id": 21,
+    "brand": "Aire Libre Wellness",
+    "img": "wellness_promo-flyerA5-sideA_by-jalofernandez.jpg",
+    "title": "promo flyer layout",
+    "tags": ["all", "layout"]
+  },
+  {
+    "id": 22,
+    "brand": "Aire Libre Wellness",
+    "img": "wellness_promo-flyerA5-sideB_by-jalofernandez.jpg",
+    "title": "promo flyer layout",
+    "tags": ["all", "layout"]
+  },
+  {
+    "id": 23,
+    "brand": "British Knights",
+    "img": "britishknights_winter-catalog_by-jalofernandez.jpg",
+    "title": "winter catalog page",
+    "tags": ["all", "layout", "photo"]
+  },
+  {
+    "id": 45,
+    "brand": "Aiba",
+    "img": "aiba_adoption-campaign-logo_by-jalofernandez.jpg",
+    "title": "adoption campaign logotype",
+    "tags": ["all", "graph"]
+  },
+  {
+    "id": 24,
+    "brand": "Widitrade",
+    "img": "widitrade_manager-offer-details_by-jalofernandez.jpg",
+    "title": "manager offer detail view",
+    "tags": ["all", "layout", "web"]
+  },
+  {
+    "id": 7,
+    "brand": "Upplication",
+    "img": "upplication_socialmedia-promo-artwork_by-jalofernandez.jpg",
+    "title": "Valentines Day promo artwork",
+    "tags": ["all", "graph"]
+  },
+  {
+    "id": 25,
+    "brand": "Bye Insects",
+    "img": "byeinsects_landing-page-with-counterdown_by-jalofernandez.jpg",
+    "title": "landing page (mobile)",
+    "tags": ["all", "layout", "web"]
+  },
+  {
+    "id": 26,
+    "brand": "Bye Insects",
+    "img": "byeinsects_landing-page-desktop_by-jalofernandez.jpg",
+    "title": "landing page (desktop)",
+    "tags": ["all", "layout", "web"]
+  },
+  {
+    "id": 53,
+    "brand": "Younging",
+    "img": "younging_bcard-mockup_by-jalofernandez.jpg",
+    "title": "business cards mockup",
+    "tags": ["all", "layout"]
+  },
+  {
+    "id": 65,
+    "brand": "Upplication",
+    "img": "upplication_crew-team-manifest_by-jalofernandez.jpg",
+    "title": "crew infography",
+    "tags": ["all", "layout", "graph"]
+  },
+  {
+    "id": 66,
+    "brand": "Knowers",
+    "img": "knowers_index-page-with-login-signin_by-jalofernandez.jpg",
+    "title": "webapp login",
+    "tags": ["all", "layout", "web"]
+  },
+  {
+    "id": 6,
+    "brand": "Acens",
+    "img": "acens-upplication_infography-cover_by-jalofernandez.jpg",
+    "title": "+ Upplication infography cover",
+    "tags": ["all", "layout", "graph"]
+  },
+  {
+    "id": 8,
+    "brand": "Acens",
+    "img": "acens-upplication_infography-page_by-jalofernandez.jpg",
+    "title": "+ Upplication commercial infography",
+    "tags": ["all", "layout", "graph"]
+  },
+  {
+    "id": 27,
+    "brand": "Spalding",
+    "img": "spalding_promo-flyer-basket_by-jalofernandez.jpg",
+    "title": "promo flyer",
+    "tags": ["all", "layout", "photo"]
+  },
+  {
+    "id": 54,
+    "brand": "Knowers",
+    "img": "teayudamosavendermas_website-contact-form_by-jalofernandez.jpg",
+    "title": "website contact form",
+    "tags": ["all", "layout", "web"]
+  },
+  {
+    "id": 55,
+    "brand": "Knowers",
+    "img": "knowers_customers-chat-page-desktop_by-jalofernandez.jpg",
+    "title": "customers chat view (desktop)",
+    "tags": ["all", "layout", "web"]
+  },
+  {
+    "id": 56,
+    "brand": "Le Pain Quotidien",
+    "img": "lepainquotidien_daily-menu-card_by-jalofernandez.jpg",
+    "title": "daily menu card",
+    "tags": ["all", "layout"]
+  },
+  {
+    "id": 57,
+    "brand": "O´Portiño",
+    "img": "oportino-restaurant_website_by-jalofernandez.jpg",
+    "title": "restaurant website intro",
+    "tags": ["all", "layout", "web"]
+  },
+  {
+    "id": 58,
+    "brand": "Widitrade",
+    "img": "ecomerzpro_email-template-outlet_by-jalofernandez.jpg",
+    "title": "email template",
+    "tags": ["all", "layout", "web"]
+  },
+  {
+    "id": 59,
+    "brand": "British Knights",
+    "img": "britishknights_promo-collection-poster_by-jalofernandez.jpg",
+    "title": "by Sergio Alcover promo poster",
+    "tags": ["all", "layout", "photo"]
+  },
+  {
+    "id": 28,
+    "brand": "Widitrade",
+    "img": "ecomerzpro-club_landing-page_by-jalofernandez.jpg",
+    "title": "landing page",
+    "tags": ["all", "layout", "web"]
+  },
+  {
+    "id": 29,
+    "brand": "O´Portiño",
+    "img": "oportino_bcard-sideA_by-jalofernandez.jpg",
+    "title": "business card side A",
+    "tags": ["all", "layout", "graph"]
+  },
+  {
+    "id": 62,
+    "brand": "Knowers",
+    "img": "knowers_customers-chat-page-mobile_by-jalofernandez.jpg",
+    "title": "customers chat view (mobile)",
+    "tags": ["all", "layout", "web"]
+  },
+  {
+    "id": 30,
+    "brand": "Medion",
+    "img": "medion_promo-triptico-exterior_by-jalofernandez.jpg",
+    "title": "promo flyer layout",
+    "tags": ["all", "layout", "photo"]
+  },
+  {
+    "id": 31,
+    "brand": "Medion",
+    "img": "medion_promo-triptico-interior_by-jalofernandez.jpg",
+    "title": "promo flyer layout",
+    "tags": ["all", "layout", "photo"]
+  },
+  {
+    "id": 32,
+    "brand": "British Knights",
+    "img": "brithisknights_swimsuit-mix-specs_by-jalofernandez.jpg",
+    "title": "swinsuit chart sheet",
+    "tags": ["all", "layout", "graph"]
+  },
+  {
+    "id": 46,
+    "brand": "Aire Libre Wellness",
+    "img": "wellness_website-newsletter-sign_by-jalofernandez.jpg",
+    "title": "newsletter sign layout",
+    "tags": ["all", "web"]
+  },
+  {
+    "id": 33,
+    "brand": "British Knights",
+    "img": "britishknights_baseball-logo_designed-by-jalofernandez.jpg",
+    "title": "baseball logo",
+    "tags": ["all", "graph"]
+  },
+  {
+    "id": 34,
+    "brand": "Punto y Coma",
+    "img": "puntoycoma_comic_strip_n28_by-jalofernandez.jpg",
+    "title": "magazine comic strip",
+    "tags": ["all", "graph"]
+  },
+  {
+    "id": 63,
+    "brand": "Knowers",
+    "img": "knowers_customers-chat-modal_by-jalofernandez.jpg",
+    "title": "customers chat modal dialog",
+    "tags": ["all", "layout", "web"]
+  },
+  {
+    "id": 64,
+    "brand": "Widitrade",
+    "img": "widitrade-manager-offer-marketplace-desktop_by-jalofernandez.jpg",
+    "title": "manager marketplace view",
+    "tags": ["all", "layout", "web"]
+  },
+  {
+    "id": 9,
+    "brand": "Movistar",
+    "img": "upplication-movistar_aso-ebook-page_by-jalofernandez.jpg",
+    "title": "+ Upplication ASO eBook page",
+    "tags": ["all", "layout", "graph"]
+  },
+  {
+    "id": 60,
+    "brand": "Upplication",
+    "img": "upplication_app-ios-template-block_by-jalofernandez.jpg",
+    "title": "iOS Template gallery view",
+    "tags": ["all", "web"]
+  },
+  {
+    "id": 61,
+    "brand": "Upplication",
+    "img": "upplication_app-ios-template-inline_by-jalofernandez.jpg",
+    "title": "iOS Template gallery view",
+    "tags": ["all", "web"]
+  },
+  {
+    "id": 10,
+    "brand": "ABC architecture",
+    "img": "abc_bcard-front-claram_designed-by-jalofernandez.jpg",
+    "title": "business card side A",
+    "tags": ["all", "layout"]
+  },
+  {
+    "id": 11,
+    "brand": "ABC architecture",
+    "img": "abc_bcard-back-claram_designed-by-jalofernandez.jpg",
+    "title": "business card side B",
+    "tags": ["all", "layout"]
+  },
+  {
+    "id": 51,
+    "brand": "Gastronomix",
+    "img": "gastronomix_website-footer_by-jalofernandez.jpg",
+    "title": "NGO website",
+    "tags": ["all", "layout", "web"]
+  },
+  {
+    "id": 12,
+    "brand": "Upplication",
+    "img": "upplication_promo-sticker_by-jalofernandez.jpg",
+    "title": "promo sticker",
+    "tags": ["all", "graph"]
+  },
+  {
+    "id": 48,
+    "brand": "Le Pain Quotidien",
+    "img": "lepainquotidien_daily-menu-promo-poster_by-jalofernandez.jpg",
+    "title": "promo poster",
+    "tags": ["all", "layout", "photo"]
+  },
+  {
+    "id": 49,
+    "brand": "Te ayudamos a vender más",
+    "img": "teayudamosavendermas_folder_by-jalofernandez.jpg",
+    "title": "promo folders",
+    "tags": ["all", "pack", "photo"]
+  },
+  {
+    "id": 52,
+    "brand": "British Knights",
+    "img": "britishknights_clothing-display-blueprint_by-jalofernandez.jpg",
+    "title": "clothing display",
+    "tags": ["all", "pack", "photo"]
+  },
+  {
+    "id": 50,
+    "brand": "Arts Club Madrid",
+    "img": "artsclubmadrid_drinks-card_by-jalofernandez.jpg",
+    "title": "drinks card page",
+    "tags": ["all", "layout"]
+  },
+  {
+    "id": 47,
+    "brand": "Knowers",
+    "img": "knowers_about-us-page_by-jalofernandez.jpg",
+    "title": "landing page layout",
+    "tags": ["all", "layout", "web"]
+  },
+  {
+    "id": 13,
+    "brand": "Upplication",
+    "img": "upplication_socialmedia-hiring-artwork_by-jalofernandez.jpg",
+    "title": "social media post artwork",
+    "tags": ["all", "graph"]
+  },
+  {
+    "id": 14,
+    "brand": "Upplication",
+    "img": "upplication-app-mcommerce-module_by-jalofernandez.png",
+    "title": "mCommerce module for Apps",
+    "tags": ["all", "layout", "web"]
+  },
+  {
+    "id": 15,
+    "brand": "Upplication",
+    "img": "upplication-dashboard-shipping-charges_by-jalofernandez.jpg",
+    "title": "dashboard shipping charges feature",
+    "tags": ["all", "layout", "web"]
+  },
+  {
+    "id": 16,
+    "brand": "Upplication",
+    "img": "upplication_ios-template-promo_by-jalofernandez.jpg",
+    "title": "iOS Template promo artwork",
+    "tags": ["all", "graph"]
+  },
+  {
+    "id": 18,
+    "brand": "Upplication",
+    "img": "upplication_dashboard-custom-forms-feature_by-jalofernandez.jpg",
+    "title": "dashboard promo feature",
+    "tags": ["all", "layout", "graph"]
+  },
+  {
+    "id": 35,
+    "brand": "Aire Libre Wellness",
+    "img": "wellness_bcard-sideA-designed-by-jalofernandez.jpg",
+    "title": "business card side A",
+    "tags": ["all", "pack", "photo"]
+  },
+  {
+    "id": 36,
+    "brand": "Aire Libre Wellness",
+    "img": "wellness_bcard-sideB-designed-by-jalofernandez.jpg",
+    "title": "business card side B",
+    "tags": ["all", "layout"]
+  },
+  {
+    "id": 40,
+    "brand": "Rusty",
+    "img": "rusty_parka-snow-labels-sideA_by-jalofernandez.jpg",
+    "title": "labels to winter jackets",
+    "tags": ["all", "layout"]
+  },
+  {
+    "id": 68,
+    "brand": "Rusty",
+    "img": "rusty_parka-snow-labels-sideB_by-jalofernandez.jpg",
+    "title": "labels to winter jackets",
+    "tags": ["all", "layout", "graph"]
+  },
+  {
+    "id": 69,
+    "brand": "Capaball",
+    "img": "capaball_white-rabbit_logo-2018_by-jalofernandez.jpg",
+    "title": "White Rabbit project logo",
+    "tags": ["all", "graph"]
+  },
+  {
+    "id": 70,
+    "brand": "Capaball",
+    "img": "capaball-webapp-promo-metrics-mobile_by-jalofernandez.jpg",
+    "title": "dashboard in Home page (mobile)",
+    "tags": ["all", "layout", "web"]
+  },
+  {
+    "id": 67,
+    "brand": "Capaball",
+    "img": "capaball-webapp-metrics-desk-overview_by-jalofernandez.jpg",
+    "title": "dashboard in Home page (desktop)",
+    "tags": ["all", "layout", "web"]
+  },
+  {
+    "id": 71,
+    "brand": "Capaball",
+    "img": "capaball-cms-desktop_add-resource_by-jalofernandez.jpg",
+    "title": "CMS to add resources in customers webapp",
+    "tags": ["all", "layout", "web"]
+  },
+  {
+    "id": 72,
+    "brand": "Capaball",
+    "img": "capaball-cms-desktop_edit-resource_by-jalofernandez.jpg",
+    "title": "CMS to edit an existing resource (desktop)",
+    "tags": ["all", "layout", "web"]
+  },
+  {
+    "id": 73,
+    "brand": "Capaball",
+    "img": "capaball-webapp-survey-overview-mobile_by-jalofernandez.jpg",
+    "title": "webapp survey in mobile devices",
+    "tags": ["all", "layout", "web"]
+  },
+  {
+    "id": 74,
+    "brand": "Comercio Vecino",
+    "img": "comerciovecino-landing-pasos-tablet_by-jalofernandez.jpg",
+    "title": "steps to register section in landing page",
+    "tags": ["all", "layout", "web", "graph"]
+  },
+  {
+    "id": 75,
+    "brand": "Comercio Vecino",
+    "img": "comerciovecino-logo-designs_by-jalofernandez.jpg",
+    "title": "logotype designs",
+    "tags": ["all", "graph"]
+  },
+  {
+    "id": 76,
+    "brand": "Comercio Vecino",
+    "img": "comerciovecino-socialmedia-cover_by-jalofernandez.jpg",
+    "title": "social media cover",
+    "tags": ["all", "graph", "photo"]
+  },
+  {
+    "id": 77,
+    "brand": "#EchoUnaMano",
+    "img": "echounamano-imagotipo-motion_by-jalofernandez.gif",
+    "title": "NGO imagotype in motion",
+    "tags": ["all", "graph", "motion"]
+  },
+  {
+    "id": 78,
+    "brand": "#EchoUnaMano",
+    "img": "echounamano-logo-designs_by-jalofernandez.jpg",
+    "title": "NGO logotype designs",
+    "tags": ["all", "layout", "web", "graph", "pack", "photo", "motion"]
+  },
+  {
+    "id": 79,
+    "brand": "#EchoUnaMano",
+    "img": "echounamano-post-socialmedia_by-jalofernandez.jpg",
+    "title": "NGO post cover",
+    "tags": ["all", "layout", "photo"]
+  },
+  {
+    "id": 80,
+    "brand": "#EchoUnaMano",
+    "img": "echounamano-promo-poster-pic_by-jalofernandez.jpg",
+    "title": "NGO promotional poster",
+    "tags": ["all", "layout", "graph", "photo"]
+  },
+  {
+    "id": 81,
+    "brand": "#EchoUnaMano",
+    "img": "echounamano-promo-infography_by-jalofernandez.jpg",
+    "title": "NGO promo infography",
+    "tags": ["all", "layout", "web", "graph"]
+  },
+  {
+    "id": 82,
+    "brand": "#HazTuNegocioDigital",
+    "img": "haztunegociodigital-landing-intro-mobile_by-jalofernandez.jpg",
+    "title": "landing page intro",
+    "tags": ["all", "layout", "web", "graph"]
+  },
+  {
+    "id": 83,
+    "brand": "#HazTuNegocioDigital",
+    "img": "haztunegociodigital-webapp-restaurante-mobile_by-jalofernandez.jpg",
+    "title": "restaurant menu page",
+    "tags": ["all", "layout", "web", "graph"]
+  },
+  {
+    "id": 84,
+    "brand": "Murmar",
+    "img": "murmar-beershop-rollup-saint-patricks-day_by-jalofernandez.jpg",
+    "title": "Beershop Saint Patricks day rollup",
+    "tags": ["all", "layout", "photo"]
+  },
+  {
+    "id": 85,
+    "brand": "QuéCarta",
+    "img": "quecarta-artwork-socialmedia-ads_by-jalofernandez.jpg",
+    "title": "artwork to socialmedia ads",
+    "tags": ["all", "graph"]
+  },
+  {
+    "id": 86,
+    "brand": "QuéCarta",
+    "img": "quecarta-logo-designs_by-jalofernandez.jpg",
+    "title": "logotype designs overview",
+    "tags": ["all", "graph"]
+  },
+  {
+    "id": 87,
+    "brand": "QuéCarta",
+    "img": "quecarta-post-cover-gaypride2020_by-jalofernandez.jpg",
+    "title": "Gaypride 2020 post cover",
+    "tags": ["all", "graph"]
+  },
+  {
+    "id": 88,
+    "brand": "QuéCarta",
+    "img": "quecarta-promo-infography_by-jalofernandez.jpg",
+    "title": "promotional infography",
+    "tags": ["all", "layout", "graph"]
+  },
+  {
+    "id": 89,
+    "brand": "QuéCarta",
+    "img": "quecarta-promo-socialmedia-ads_by-jalofernandez.jpg",
+    "title": "artwork to socialmedia ads",
+    "tags": ["all", "layout", "web", "graph", "photo"]
+  },
+  {
+    "id": 90,
+    "brand": "The Seed Squad",
+    "img": "theseedsquad-landing-manifest-desktop_by-jalofernandez.jpg",
+    "title": "manifesto in landing page",
+    "tags": ["all", "layout", "web", "graph"]
+  },
+  {
+    "id": 91,
+    "brand": "#HazTuNegocioDigital",
+    "img": "haztunegociodigital-restaurant-qrcodes-prints_by-jalofernandez.jpg",
+    "title": "restaurant QR codes prints",
+    "tags": ["all", "layout", "graph"]
+  }
+]

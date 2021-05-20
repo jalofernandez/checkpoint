@@ -19,6 +19,7 @@ module.exports = {
       textColor: (theme) => ({
         dark: theme('colors.sky.300'),
       }),
+      backgroundColor: ['active'],
       colors: {
         'gray-main': {
           300: '#EAEDF2',
