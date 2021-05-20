@@ -42,7 +42,7 @@
                 v-model="auth.oldPass"
                 class="mt-4"
                 type="password"
-                name="password"
+                name="pass"
                 label="Contraseña actual"
                 placeholder="*****..."
               />
@@ -80,7 +80,6 @@ export default {
       email: $nuxt.$fire.auth.currentUser.email,
       oldPass: '',
       newPass: '',
-      // filled: true,
       error: '',
       success: '',
     },
