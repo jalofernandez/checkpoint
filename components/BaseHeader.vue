@@ -46,10 +46,14 @@
           <NuxtLink
             v-if="isUserLog"
             :to="`/auth/${$nuxt.$fire.auth.currentUser.uid}`"
-            class="font-medium text-xs text-gray-500 dark:text-white hover:text-gray-600 mb-1"
+            class="special-link w-40 mb-1 truncate inline-block text-right font-medium text-xs text-navy-500 hover:text-navy-900 dark:text-sky-300 dark:hover:text-white"
           >
-            <b class="mr-1 truncate max-w-md inline-block">{{ $nuxt.$fire.auth.currentUser.displayName }}</b>
-            <span>{{ $nuxt.$fire.auth.currentUser.email }}</span>
+            <span v-if="$nuxt.$fire.auth.currentUser.displayName">
+              {{ $nuxt.$fire.auth.currentUser.displayName }}
+            </span>
+            <span v-else>
+              {{ $nuxt.$fire.auth.currentUser.email }}
+            </span>
           </NuxtLink>
           <button
             v-if="isUserLog"
@@ -114,7 +118,7 @@ export default {
   width: 45px;
   height: 45px;
 }
-.nuxt-link-exact-active:not(.logo-link) {
+.nuxt-link-exact-active:not(.special-link) {
   display: none;
 }
 </style>
