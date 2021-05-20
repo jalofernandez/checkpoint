@@ -71,14 +71,13 @@
             </svg>
           </button>
         </div>
-        <img
+        <!-- <img
           v-if="$nuxt.$fire.auth.currentUser.photoUrl"
           class="w-10 h-10 mr-2"
           :src="$nuxt.$fire.auth.currentUser.photoUrl"
           alt="Google Profile pic as an avatar"
-        />
+        /> -->
         <img
-          v-else
           class="w-10 h-10 mr-2"
           src="@/assets/images/profile-default.png"
           alt="Profile pic by default"
