@@ -3,7 +3,7 @@
     <label
       v-if="label"
       :for="name"
-      class="block text-gray-700 dark:text-sky-300"
+      class="block text-navy-700 dark:text-sky-300"
     >
       {{ label }}
     </label>

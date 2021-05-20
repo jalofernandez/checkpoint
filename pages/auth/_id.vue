@@ -4,18 +4,25 @@
       <div class="lg:w-4/6 mx-auto">
         <div class="flex flex-col sm:flex-row mt-10">
           <div class="sm:w-1/3 text-center sm:pr-8 sm:py-8">
-            <div class="w-20 h-20 rounded-full inline-flex items-center justify-center bg-gray-200 text-gray-400">
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10" viewBox="0 0 24 24">
-                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-                <circle cx="12" cy="7" r="4"></circle>
-              </svg>
+            <div class="w-20 h-20 rounded-full inline-flex items-center justify-center bg-gray-200 dark:bg-navy-700 text-gray-400">
+              <!-- <img
+                v-if="user.photo"
+                class="w-20 h-20"
+                :src="user.photo"
+                :alt="`${user.displayName} profile picture`"
+              /> -->
+              <img
+                class="w-20 h-20"
+                src="@/assets/images/profile-default.png"
+                alt="Current user profile pic by default"
+              />
             </div>
             <div class="flex flex-col items-center text-center justify-center">
-              <h2 class="font-medium title-font mt-4 text-gray-900 text-lg">
+              <h2 class="font-medium title-font mt-4 text-gray-900 dark:text-sky-300 text-lg">
                 {{ $nuxt.$fire.auth.currentUser.displayName }}
               </h2>
               <div class="w-12 h-1 bg-indigo-500 rounded mt-2 mb-4"></div>
-              <p class="text-base">
+              <p class="text-base dark:text-sky-300">
                 {{ $nuxt.$fire.auth.currentUser.email }}
               </p>
             </div>

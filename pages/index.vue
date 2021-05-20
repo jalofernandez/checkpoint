@@ -120,7 +120,7 @@
               </svg>
             </div>
             <div class="mt-8">
-              <p class="text-xl font-semibold my-2">
+              <p class="text-xl font-semibold dark:text-navy-300 my-2">
                 {{ project.name }}
               </p>
               <div class="flex space-x-2 text-navy-900 dark:text-sky-300 text-sm">
