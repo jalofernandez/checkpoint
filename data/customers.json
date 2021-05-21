@@ -1,0 +1,196 @@
+[
+  {
+    "customerId": 1,
+    "doggie": {
+      "name": "andi",
+      "breed": ["bichón maltés"],
+      "mood": "Simpático jugetón"
+    },
+    "owner": [
+      {
+        "name": "lina",
+        "phone": 696620723
+      }
+    ],
+    "comment": "Es superbueno :)",
+    "dates": [
+      {
+        "date": "2017-03-06T00:00:00-0400",
+        "groom": null,
+        "price": 28
+      }
+    ]
+  },
+  {
+    "customerId": 2,
+    "doggie": {
+      "name": "rondo",
+      "breed": ["pastor alemán"],
+      "mood": "Simpático jugetón"
+    },
+    "owner": [
+      {
+        "name": "Alberto",
+        "phone": 626625183
+      },
+      {
+        "name": "Laura",
+        "phone": 699356025
+      }
+    ],
+    "comment": "",
+    "dates": [
+      {
+        "date": "2017-03-06T00:00:00-0400",
+        "groom": null,
+        "price": 28
+      }
+    ]
+  },
+  {
+    "customerId": 3,
+    "doggie": {
+      "name": "zape",
+      "breed": ["mestizo/a","podenco"],
+      "mood": ""
+    },
+    "owner": [
+      {
+        "name": "Julia Durán",
+        "phone": ""
+      }
+    ],
+    "comment": "Mestizo de podenco",
+    "dates": [
+      {
+        "date": "2018-01-20T00:00:00-0400",
+        "groom": "calza 1/2 cráneo esculpir",
+        "price": 28
+      },
+      {
+        "date": "2017-07-03T00:00:00-0400",
+        "groom": "5f completo, 3f cráneo, 5f orejas",
+        "price": 26
+      }
+    ]
+  },
+  {
+    "customerId": 6,
+    "doggie": {
+      "name": "zeus",
+      "breed": ["bichón maltés"],
+      "mood": "Simpático jugetón"
+    },
+    "owner": [
+      {
+        "name": "Alberto",
+        "phone": 626625183
+      },
+      {
+        "name": "Laura",
+        "phone": 699356025
+      }
+    ],
+    "comment": "ojos de loco",
+    "dates": [
+      {
+        "date": "2020-07-01T00:00:00-0400",
+        "groom": "baño + calza 13mm",
+        "price": 28
+      }
+    ]
+  },
+  {
+    "customerId": 7,
+    "doggie": {
+      "name": "zeus",
+      "breed": ["boyero de berna"],
+      "mood": ""
+    },
+    "owner": [
+      {
+        "name": "Patri",
+        "phone": ""
+      }
+    ],
+    "comment": "",
+    "dates": [
+      {
+        "date": "2020-06-15T00:00:00-0400",
+        "groom": "deslane con coat en bañera",
+        "price": 40
+      }
+    ]
+  },
+  {
+    "customerId": 8,
+    "doggie": {
+      "name": "zoe",
+      "breed": ["PDAE"],
+      "mood": ""
+    },
+    "owner": [
+      {
+        "name": "Cini (whatsapp)",
+        "phone": ""
+      }
+    ],
+    "comment": "",
+    "dates": [
+      {
+        "date": "2020-01-03T00:00:00-0400",
+        "groom": "Se llevó perfume a 11,50€",
+        "price": 35
+      }
+    ]
+  },
+  {
+    "customerId": 9,
+    "doggie": {
+      "name": "zoe",
+      "breed": ["mestizo/a","shih tzu"],
+      "mood": ""
+    },
+    "owner": [
+      {
+        "name": "Elvira",
+        "phone": 626613482
+      }
+    ],
+    "comment": "",
+    "dates": [
+      {
+        "date": "2020-05-13T00:00:00-0400",
+        "groom": "carita redonda Vane",
+        "price": 28
+      },
+      {
+        "date": "2018-06-18T00:00:00-0400",
+        "groom": "3mm completa, cráneo 5f, oreja 3f",
+        "price": 28
+      }
+    ]
+  },
+  {
+    "customerId": 10,
+    "doggie": {
+      "name": "lucas",
+      "breed": ["caniche"],
+      "mood": ""
+    },
+    "owner": [
+      {
+        "name": "Satur",
+        "phone": 918954941
+      }
+    ],
+    "comment": "",
+    "dates": [
+      {
+        "date": "2017-03-06T00:00:00-0400",
+        "groom": "",
+        "price": 28
+      }
+    ]
+  }
+]

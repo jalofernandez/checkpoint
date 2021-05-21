@@ -1,24 +1,35 @@
 <template>
   <div>
-    <section class="container">
-      <p class="h-36 flex justify-center items-center">
+    <section class="container p-5 relative">
+      <p class="sticky top-20 z-40 pb-2 flex justify-start items-center bg-opacity-75 bg-white dark:bg-navy-900 dark:text-white backdrop-filter backdrop-blur-sm">
+        <input
+          v-model="searchQuery"
+          type="text"
+          class="w-80 px-4 py-3 rounded-lg border text-navy-700 dark:text-white bg-gray-200 dark:bg-navy-700 focus:bg-gray-100 dark:focus:bg-navy-500 border-gray-200 dark:border-navy-700 focus:border-blue-500 focus:outline-none dark:placeholder-navy-300 dark:focus:placeholder-navy-500"
+          placeholder="Para buscar o filtrar..."
+        />
         <button
           type="button"
-          class="block bg-indigo-500 hover:bg-indigo-400 focus:bg-indigo-400 text-white font-semibold rounded-lg px-4 py-3 mt-6"
+          class="block rounded-lg px-3 py-1 ml-2 bg-navy-300 hover:bg-navy-500 focus:bg-navy-500 active:bg-navy-500 text-white font-semibold"
           @click="readFromRealtimeDb()"
         >
           Cargar usuarios
         </button>
+        <button
+          v-for="pageNumber in totalPages"
+          :key="pageNumber.id"
+          v-bind:key="pageNumber"
+          @click="setPage(pageNumber)"
+          type="button"
+          class="block rounded-full px-3 py-1 ml-2 bg-navy-300 hover:bg-navy-500 focus:bg-navy-500 active:bg-navy-500 text-white font-semibold"
+          :class="{
+            current: currentPage === pageNumber,
+            last: (pageNumber == totalPages && Math.abs(pageNumber - currentPage) > 3),
+            first: (pageNumber == 1 && Math.abs(pageNumber - currentPage) > 3)
+          }">
+            {{ pageNumber }}
+        </button>
       </p>
-    </section>
-    <!-- customers TAILWINDCSS :: TABLE -->
-    <section class="container">
-      <input
-        v-model="searchQuery"
-        type="text"
-        class="px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none"
-        placeholder="Para buscar o filtrar..."
-      />
       <div class="overflow-x-auto">
         <div
           class="min-w-screen flex items-center justify-center font-sans overflow-hidden"
@@ -26,13 +37,8 @@
           <div class="w-full">
             <div class="bg-white dark:text-white shadow-md rounded my-6">
               <table class="min-w-max w-full table-auto">
-                <!-- <caption>
-                  <span>{{ customers.length }}</span>
-                </caption> -->
                 <thead>
-                  <tr
-                    class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal"
-                  >
+                  <tr class="bg-gray-200 text-gray-500 dark:bg-navy-700 dark:text-navy-300 uppercase text-sm leading-normal">
                     <th class="py-3 px-4 text-left">ID</th>
                     <th class="py-3 px-4 text-left">Raza</th>
                     <th class="py-3 px-4 text-left">Perrete</th>
@@ -48,12 +54,14 @@
                   <tr
                     v-for="(customer, index) in filteredCustomers"
                     :key="index"
-                    class="border-b border-gray-200 hover:bg-gray-100"
+                    class="border-b border-gray-200 dark:border-navy-700 hover:bg-gray-100 dark:hover:bg-navy-700"
                   > -->
                   <tr
-                    v-for="(customer, index) in customers.slice(26, 38)"
+                    v-for="(customer, index) in customersPerPage"
                     :key="index"
-                    class="border-b border-gray-200 hover:bg-gray-100"
+                    class="border-b border-gray-200 dark:border-navy-700 
+                    bg-white 
+                    dark:bg-navy-900 hover:bg-gray-100 dark:hover:bg-navy-700"
                   >
                     <!-- Customer ID -->
                     <td class="py-3 px-4 text-left whitespace-nowrap">
@@ -82,7 +90,7 @@
                             :src="require(`~/assets/doggies/bichon-maltes.png`)"
                           />
                         </div>
-                        <small class="mr-1">
+                        <small class="mr-1 text-navy-700 dark:text-sky-300">
                           {{ [...customer.doggie.breed].sort().join(', ') }}
                         </small>
                       </div>
@@ -90,7 +98,7 @@
                     <!-- Doggie Name -->
                     <td class="py-3 px-4 text-left">
                       <div class="flex items-center">
-                        <span class="font-medium capitalize">
+                        <span class="font-medium capitalize text-navy-700 dark:text-sky-300">
                           {{ customer.doggie.name }}
                         </span>
                       </div>
@@ -102,7 +110,7 @@
                         class="py-0.5 px-2 rounded-full text-xs"
                         :class="`bg-${getColorMood(
                           customer.doggie.mood
-                        )}-200 text-${getColorMood(customer.doggie.mood)}-600`"
+                        )}-200 text-${getColorMood(customer.doggie.mood)}-700`"
                       >
                         {{ customer.doggie.mood }}
                       </span>
@@ -116,21 +124,21 @@
                       >
                         <span
                           v-if="owner.phone != ''"
-                          class="text-sm font-medium mr-2"
+                          class="mr-2 text-sm font-medium text-navy-700 dark:text-sky-300"
                         >
                           {{ owner.phone }}
                         </span>
-                        <span v-else class="text-sm text-gray-300 mr-2">
+                        <span v-else class="mr-2 text-sm text-gray-300 dark:text-navy-700">
                           600000000
                         </span>
-                        <span v-if="owner.name != ''" class="capitalize">
+                        <span v-if="owner.name != ''" class="capitalize text-navy-900 dark:text-sky-100">
                           {{ owner.name }}
                         </span>
                       </div>
                     </td>
                     <!-- Comments -->
                     <td class="py-3 px-4 text-left whitespace-nowrap">
-                      <div class="flex items-center">
+                      <div class="flex items-center text-navy-700 dark:text-sky-300">
                         <small>{{ customer.comment }}</small>
                       </div>
                     </td>
@@ -216,91 +224,21 @@
 </template>
 
 <script>
+// IMP! If U want use local data instead Firebase´s one!
+// import customers from '~/data/customers'
+
 export default {
   name: 'Customers',
   layout: 'Default',
   data: () => ({
     searchQuery: '',
     customers: [],
-    // customers: [
-    //   {
-    //     "customerId": 1,
-    //     "doggie": {
-    //       "name": "andi",
-    //       "breed": ["bichón maltés"],
-    //       "mood": "Simpático jugetón",
-    //     },
-    //     "owner": [
-    //       {
-    //         "name": "lina",
-    //         "phone": 696620723,
-    //       }
-    //     ],
-    //     "comment": "Es superbueno :)",
-    //     "dates": [
-    //       {
-    //         "date": "2017-03-06T00:00:00-0400",
-    //         "groom": null,
-    //         "price": 28
-    //       }
-    //     ]
-    //   },
-    //   {
-    //     "customerId": 2,
-    //     "doggie": {
-    //       "name": "rondo",
-    //       "breed": ["pastor alemán"],
-    //       "mood": "Simpático jugetón",
-    //     },
-    //     "owner": [
-    //       {
-    //         "name": "Alberto",
-    //         "phone": 626625183
-    //       },
-    //       {
-    //         "name": "Laura",
-    //         "phone": 699356025
-    //       }
-    //     ],
-    //     "comment": "",
-    //     "dates": [
-    //       {
-    //         "date": "2017-03-06T00:00:00-0400",
-    //         "groom": null,
-    //         "price": 28
-    //       }
-    //     ]
-    //   },
-    //   {
-    //     "customerId": 3,
-    //     "doggie": {
-    //       "name": "zape",
-    //       "breed": ["mestizo/a","podenco"],
-    //       "mood": "",
-    //     },
-    //     "owner": [
-    //       {
-    //         "name": "Julia Durán",
-    //         "phone": "",
-    //       }
-    //     ],
-    //     "comment": "Mestizo de podenco",
-    //     "dates": [
-    //       {
-    //         "date": "2018-01-20T00:00:00-0400",
-    //         "groom": "calza 1/2 cráneo esculpir",
-    //         "price": 28
-    //       },
-    //       {
-    //         "date": "2017-07-03T00:00:00-0400",
-    //         "groom": "5f completo, 3f cráneo, 5f orejas",
-    //         "price": 26
-    //       }
-    //     ]
-    //   },
-    // ],
+    currentPage: 1,
+    itemsPerPage: 36,
+    resultCount: 0,
   }),
   computed: {
+    // IMP! logic to filtering data incomplete by the moment...
     filteredCustomers() {
       return this.customers.filter(customer => {
         const doggieName = customer.doggie.name.toLowerCase();
@@ -317,6 +255,18 @@ export default {
               // doggieOwner.includes(searchTerm) ||
               doggieComs.includes(searchTerm);
       });
+    },
+    // IMP! Data loads with pagination options only
+    customersPerPage() {
+      if (!this.customers || this.customers.length != this.customers.length) return this.customers
+      this.resultCount = this.customers.length
+      if (this.currentPage >= this.totalPages) this.currentPage = this.totalPages
+      var index = this.currentPage * this.itemsPerPage - this.itemsPerPage
+      return this.customers.slice(index, index + this.itemsPerPage)
+    },
+    totalPages() {
+      if (this.resultCount == 0) return 1
+      else return Math.ceil(this.resultCount / this.itemsPerPage)
     }
   },
   methods: {
@@ -367,13 +317,18 @@ export default {
       try {
         const snapshot = await messageRef.once('value')
         // alert('RealTimeDB conextion success! -> ' + snapshot.val())
-        this.$toast.success('RealTimeDB conextion success! -> ' + snapshot.val())
+        this.$toast.success(`Descargando &nbsp;<b>${snapshot.val().length}</b>&nbsp; usuarios de Firebase RealTimeDB`)
         this.customers = snapshot.val()
       } catch (e) {
         this.$toast.error('Error get data from RealTimeDB! -> ' + e.message)
         // return
       }
     },
+
+    setPage(pageNumber) {
+      this.currentPage = pageNumber
+    },
+
     formatDate(dateStr) {
       const date = new Date(dateStr)
       // return date.toLocaleDateString('es-ES', { month: 'long', year: 'numeric' })
