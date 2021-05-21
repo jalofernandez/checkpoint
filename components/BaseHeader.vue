@@ -114,10 +114,6 @@ export default {
 </script>
 
 <style scoped>
-.logo-brand {
-  width: 45px;
-  height: 45px;
-}
 .nuxt-link-exact-active:not(.special-link) {
   display: none;
 }

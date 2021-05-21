@@ -3,7 +3,7 @@
     to="/"
     class="special-link anim-appear flex title-font font-medium items-center"
   >
-    <LogoImage class="logo-brand" />
+    <LogoImage class="logo-brand w-10 h-10" />
     <span class="text-xl text-navy-900 dark:text-white">
       <b>Check</b>Point
     </span>
@@ -20,11 +20,6 @@ export default {
 </script>
 
 <style>
-.logo-brand {
-  width: 45px;
-  height: 45px;
-}
-
 .anim-appear {
   animation: 1s appear;
 }
