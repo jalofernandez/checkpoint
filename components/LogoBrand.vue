@@ -4,7 +4,7 @@
     class="special-link anim-appear flex title-font font-medium items-center"
   >
     <LogoImage class="logo-brand w-10 h-10" />
-    <span class="text-xl text-navy-900 dark:text-white">
+    <span class="text-xl text-navy-900 hover:text-navy-700 dark:text-sky-100 dark:hover:text-sky-300">
       <b>Check</b>Point
     </span>
   </NuxtLink>

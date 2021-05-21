@@ -10,7 +10,7 @@
         class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400 flex flex-wrap items-center text-base justify-center"
       >
         <NuxtLink
-          class="mr-5 text-gray-700 hover:text-gray-900 font-medium cursor-pointer"
+          class="mr-5 text-navy-900 hover:text-navy-700 dark:text-sky-100 dark:hover:text-sky-300 font-medium cursor-pointer"
           to="/"
         >
           Dashboard
