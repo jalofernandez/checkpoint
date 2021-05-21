@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="min-h-screen">
     <section class="container p-5 relative">
       <p class="sticky top-20 z-40 pb-2 flex justify-start items-center bg-opacity-75 bg-white dark:bg-navy-900 dark:text-white backdrop-filter backdrop-blur-sm">
         <input

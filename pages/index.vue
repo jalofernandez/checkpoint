@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="min-h-screen">
     <!-- <section class="container">
       <div
         class="bg-gray-100 m-auto w-96 h-64 mt-5"

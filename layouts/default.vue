@@ -7,6 +7,7 @@
       </transition>
     </main>
     <BaseFooter />
+    <NavbarMobile />
   </div>
 </template>
 

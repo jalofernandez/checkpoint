@@ -1,35 +1,34 @@
 <template>
-  <section class="container">
-    <div class="overflow-x-auto">
-      <div
-        class="min-w-screen flex items-center justify-center font-sans overflow-hidden"
-      >
-        <div class="w-full">
-          <div
-            id="demo"
-            class="bg-white dark:text-white shadow-md rounded my-6"
-          >
-            <form id="search">
-              <label class="block text-gray-700 dark:text-white">
-                <b>Buscar</b>/ filtrar
-              </label>
-              <input
-                v-model="searchQuery"
-                name="query"
-                class="px-4 py-3 rounded-lg bg-gray-200 mb-4 border focus:border-blue-500 focus:bg-white focus:outline-none"
-                placeholder="Filtrar..."
-              />
-            </form>
-            <DemoGrid
-              :data="gridData"
-              :columns="gridColumns"
-              :filter-key="searchQuery"
-            ></DemoGrid>
+  <div class="min-h-screen">
+    <section class="container p-5 relative">
+      <p class="sticky top-20 z-40 pb-2 flex justify-start items-center bg-opacity-75 bg-white dark:bg-navy-900 dark:text-white backdrop-filter backdrop-blur-sm">
+        <input
+          v-model="searchQuery"
+          type="query"
+          class="w-80 px-4 py-3 rounded-lg border text-navy-700 dark:text-white bg-gray-200 dark:bg-navy-700 focus:bg-gray-100 dark:focus:bg-navy-500 border-gray-200 dark:border-navy-700 focus:border-blue-500 focus:outline-none dark:placeholder-navy-300 dark:focus:placeholder-navy-500"
+          placeholder="Para buscar o filtrar..."
+        />
+      </p>
+      <div class="overflow-x-auto">
+        <div
+          class="min-w-screen flex items-center justify-center font-sans overflow-hidden"
+        >
+          <div class="w-full">
+            <div
+              id="demo"
+              class="bg-white dark:text-white shadow-md rounded my-6"
+            >
+              <DemoGrid
+                :data="gridData"
+                :columns="gridColumns"
+                :filter-key="searchQuery"
+              ></DemoGrid>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </template>
 
 <script>

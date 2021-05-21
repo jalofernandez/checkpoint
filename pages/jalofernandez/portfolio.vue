@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="min-h-screen">
     <section class="container p-5 relative">
-      <p class="sticky top-20 pb-2 flex justify-start items-center bg-opacity-75 bg-white dark:bg-navy-900 dark:text-white backdrop-filter backdrop-blur-sm">
+      <p class="sticky top-20 z-40 pb-2 flex justify-start items-center bg-opacity-75 bg-white dark:bg-navy-900 dark:text-white backdrop-filter backdrop-blur-sm">
         <input
           v-model="filter"
           type="text"
@@ -23,67 +23,77 @@
             {{ pageNumber }}
         </button>
       </p>
-      <div class="w-full mt-4 overflow-x-hidden">
-        <table class="overflow-x-auto">
-          <thead>
-            <tr class="bg-gray-200 text-gray-500 dark:bg-navy-700 dark:text-navy-300 uppercase text-sm leading-normal">
-              <th class="py-3 px-4 text-left">ID</th>
-              <th class="py-3 px-4 text-left">Brand</th>
-              <th class="py-3 px-4 text-left">Title</th>
-              <th class="py-3 px-4 text-left">Image</th>
-              <th class="py-3 px-4 text-left">Tags</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr
-              v-for="(row, index) in filteredRows"
-              :key="index"
-              class="border-b border-gray-200 dark:border-navy-700 hover:bg-gray-100 dark:hover:bg-navy-700"
-            >
-              <td class="py-3 px-4 text-left whitespace-nowrap">
-                <div class="flex items-center">
-                  <span
-                    v-html="row.id"
-                    class="font-medium text-green-200"
-                  ></span>
-                </div>
-              </td>
-              <td class="py-3 px-4 text-left whitespace-nowrap">
-                <div class="flex items-center">
-                  <span
-                    v-html="highlightMatches(row.brand)"
-                    class="font-medium text-sm text-navy-700 dark:text-sky-300"
-                  ></span>
-                </div>
-              </td>
-              <td class="py-3 px-4 text-left whitespace-nowrap">
-                <div class="flex items-center">
-                  <span
-                    v-html="highlightMatches(row.title)"
-                    class="font-medium text-sm text-navy-700 dark:text-sky-300 truncate w-64 inline-block"
-                  ></span>
-                </div>
-              </td>
-              <td class="py-3 px-4 text-left whitespace-nowrap">
-                <div class="flex items-center">
-                  <span
-                    v-html="highlightMatches([...row.tags].sort().join(', '))"
-                    class="font-medium text-sm text-navy-900 dark:text-sky-100"
-                  ></span>
-                </div>
-              </td>
-              <td class="py-3 px-4 text-left whitespace-nowrap text-sm truncate w-80 inline-block">
-                <div class="flex items-center">
-                  <span
-                    v-html="highlightMatches(row.img)"
-                    :title="row.img"
-                    class="font-medium text-sm text-navy-700 dark:text-sky-300 truncate w-80 inline-block"
-                  ></span>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="overflow-x-auto">
+        <div
+          class="min-w-screen flex items-center justify-center font-sans overflow-hidden"
+        >
+          <div class="w-full">
+            <div class="bg-white dark:text-white shadow-md rounded my-6">
+              <table class="min-w-max w-full table-auto">
+                <thead>
+                  <tr class="bg-gray-200 text-gray-500 dark:bg-navy-700 dark:text-navy-300 uppercase text-sm leading-normal">
+                    <th class="py-3 px-4 text-left">ID</th>
+                    <th class="py-3 px-4 text-left">Brand</th>
+                    <th class="py-3 px-4 text-left">Title</th>
+                    <th class="py-3 px-4 text-left">Image</th>
+                    <th class="py-3 px-4 text-left">Tags</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr
+                    v-for="(row, index) in filteredRows"
+                    :key="index"
+                    class="border-b border-gray-200 dark:border-navy-700 
+                    bg-white 
+                    dark:bg-navy-900 hover:bg-gray-100 dark:hover:bg-navy-700"
+                  >
+                    <td class="py-3 px-4 text-left whitespace-nowrap">
+                      <div class="flex items-center">
+                        <span
+                          v-html="row.id"
+                          class="font-medium text-green-200"
+                        ></span>
+                      </div>
+                    </td>
+                    <td class="py-3 px-4 text-left whitespace-nowrap">
+                      <div class="flex items-center">
+                        <span
+                          v-html="highlightMatches(row.brand)"
+                          class="font-medium text-sm text-navy-700 dark:text-sky-300"
+                        ></span>
+                      </div>
+                    </td>
+                    <td class="py-3 px-4 text-left whitespace-nowrap">
+                      <div class="flex items-center">
+                        <span
+                          v-html="highlightMatches(row.title)"
+                          class="font-medium text-sm text-navy-700 dark:text-sky-300 truncate w-64 inline-block"
+                        ></span>
+                      </div>
+                    </td>
+                    <td class="py-3 px-4 text-left whitespace-nowrap">
+                      <div class="flex items-center">
+                        <span
+                          v-html="highlightMatches([...row.tags].sort().join(', '))"
+                          class="font-medium text-sm text-navy-900 dark:text-sky-100"
+                        ></span>
+                      </div>
+                    </td>
+                    <td class="py-3 px-4 text-left whitespace-nowrap text-sm truncate w-80 inline-block">
+                      <div class="flex items-center">
+                        <span
+                          v-html="highlightMatches(row.img)"
+                          :title="row.img"
+                          class="font-medium text-sm text-navy-700 dark:text-sky-300 truncate w-80 inline-block"
+                        ></span>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </div>
