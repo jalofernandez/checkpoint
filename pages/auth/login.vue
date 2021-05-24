@@ -90,7 +90,7 @@
               Login
             </button>
           </form>
-          <hr class="my-6 border-gray-300 w-full" />
+          <hr class="my-6 border-gray-300 w-full"/>
           <ButtonLoginSocial :type="'google'" @click="loginWithGoogle()" />
           <!-- to enable a link to SignUp form -->
           <p class="mt-8 text-gray-700 dark:text-sky-300">
@@ -154,7 +154,7 @@
               Registrar nuevo usuario
             </button>
           </form>
-          <hr class="my-6 border-gray-300 w-full" />
+          <hr class="my-6 border-gray-300 w-full"/>
           <!-- to enable a link to SignUp form -->
           <p class="mt-8 text-gray-700 dark:text-sky-300">
             ¿Ya tienes cuenta y sólo quieres logearte?
