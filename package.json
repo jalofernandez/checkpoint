@@ -28,7 +28,7 @@
     "@nuxtjs/firebase": "^7.6.1",
     "@nuxtjs/toast": "^3.3.1",
     "core-js": "^3.15.2",
-    "firebase": "^8.7.1",
+    "firebase": "^8.8.0",
     "nuxt": "^2.15.7"
   },
   "devDependencies": {
